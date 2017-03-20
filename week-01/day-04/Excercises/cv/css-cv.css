@@ -1,0 +1,60 @@
+header {
+    background-image: url(pics/anakin.png);
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    line-height: 0;
+}
+
+h1 {
+    font-size: 70px;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: normal;
+}
+
+h1, h2 {
+    font-family: 'Abril Fatface', cursive;
+    color: #222;
+}
+
+h3 {
+    text-transform: uppercase;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    margin-top: 0;
+    margin-right: 35px;
+    margin-left: 35px;
+}
+
+main, header section {
+    margin: auto;
+    max-width: 700px;
+    font-size: 15px;
+}
+
+header section {
+    padding: 220px;
+}
+
+q {
+    background-color: #444444;
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+section dd {
+    font-family: 'Merriweather', serif;
+    font-size: 15px;
+}
+
+dt {
+    font-size:20px;
+}
