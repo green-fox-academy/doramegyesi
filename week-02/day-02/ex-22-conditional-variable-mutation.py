@@ -2,7 +2,7 @@ a = 24
 out = 0
 # if a is even increment out by one
 if a % 2 == 0:
-    out = 1
+    out += 1
 print(out)
 
 b = 13
