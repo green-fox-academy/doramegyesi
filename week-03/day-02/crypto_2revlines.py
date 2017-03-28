@@ -1,10 +1,13 @@
 # Create a method that decrypts texts/reversed_zen_lines.txt
 
 text = open("reversed_lines.txt", "r")
-stuff = text.read()
+thing = text.readlines()
 text.close()
 
-def decrypt(stuff):
-    print(stuff[::-1])
+def decrypt(thing):
+    new = ""
+    for b in range(len(thing)):
+        new += thing[b][::-1]
+    print(new)
 
-decrypt(stuff)
+decrypt(thing)
