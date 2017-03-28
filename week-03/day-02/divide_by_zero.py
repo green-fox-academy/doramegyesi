@@ -6,13 +6,10 @@
 b = int(input("Give me a number! "))
 
 def take_it(b):
-    while True:
-        try:
-            c = 10/b
-            print(c)
-            break
-        except ZeroDivisionError:
-            print("fail")
-            break
+    try:
+        c = 10/b
+        print(c)
+    except ZeroDivisionError:
+        print("fail")
 
 take_it(b)
