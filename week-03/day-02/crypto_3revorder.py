@@ -1,8 +1,7 @@
-text = open("reversed_order.txt", "r")
-stuff = text.readlines()
-text.close()
-
 def decrypt(stuff):
+    text = open(stuff, "r")
+    stuff = text.readlines()
+    text.close()
     print(stuff[::-1])
 
-decrypt(stuff)
+decrypt("reversed_order.txt")
