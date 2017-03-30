@@ -9,15 +9,15 @@ canvas.pack()
 def draw_square(x, y, size):
     canvas.create_rectangle(x, y, x+size, y+size, width=2, fill="yellow")
 
-def recursive_something(x, y, size):
+def rec_sq(x, y, size):
     draw_square(x, y, size)
     canvas.update()
-    if size > 10:
-        recursive_something(x+1/3*size, y, size/3)
-        recursive_something(x+1/3*size, y+2/3*size, size/3)
-        recursive_something(x, y+1/3*size, size/3)
-        recursive_something(x+2/3*size, y+1/3*size, size/3)
+    if size > 8:
+        rec_sq(x+1/3*size, y, size/3)
+        rec_sq(x+1/3*size, y+2/3*size, size/3)
+        rec_sq(x, y+1/3*size, size/3)
+        rec_sq(x+2/3*size, y+1/3*size, size/3)
 
-recursive_something(5, 5, 590)
+rec_sq(5, 5, 590)
 
 root.mainloop()
