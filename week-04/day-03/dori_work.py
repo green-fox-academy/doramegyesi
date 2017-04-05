@@ -29,7 +29,7 @@ class Anagram:
         else:
             return False
 
-class Letter_counter:
+class LetterCounter:
     def __init__(self, string):
         self.string = string
 
@@ -41,3 +41,14 @@ class Letter_counter:
             else:
                 dic[letter] += 1
             return dic
+
+class Fibonacci:
+    def __init__(self, numbers):
+        self.numbers = numbers
+
+    def fibonacci(self, numbers):
+        self.numbers = numbers
+        if self.numbers < 2:
+            return numbers
+        else:
+            return self.fibonacci(numbers -1) + self.fibonacci(numbers -2)

@@ -29,11 +29,15 @@ class TestAnagram(unittest.TestCase):
         words = Anagram("dog", "god")
         self.assertEqual(words.anagrams(), True)
 
-class TestLetter_counter(unittest.TestCase):
-    def count_letters(self):
-        word = Letter_counter("terrier")
-        self.assertEqual(word.count_letters(), {"t": 1, "e": 2, "r": 3, "i": 1})
+"""class TestLetterCounter(unittest.TestCase):
+    def test_count_letters(self):
+        word = LetterCounter("anna")
+        self.assertEqual(word.count_letters(), {"a": 2, "n": 2})"""
 
+class TestFibonacci(unittest.TestCase):
+    def test_fibonacci(self):
+        number = Fibonacci(5)
+        self.assertEqual(number.fibonacci(5), 5)
 
 if __name__ == '__main__':
     unittest.main()
