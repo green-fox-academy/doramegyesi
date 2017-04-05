@@ -1,5 +1,5 @@
 class Apples:
-    def __init__(self, apple = "apple"):
+    def __init__(self, apple = "cockroach"):
         self.apple = apple
 
     def get_apple(self):
