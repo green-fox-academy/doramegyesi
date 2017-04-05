@@ -13,6 +13,10 @@ class TestSum_stuff(unittest.TestCase):
         new_individual = Sum_stuff([6, 7])
         self.assertEquals(new_individual.sum_all(), 13)
 
+class TestSum_stuff(unittest.TestCase):
+    def test_sum_all(self):
+        new_individual = Sum_stuff([])
+        self.assertEquals(new_individual.sum_all(), [])
 
 if __name__ == '__main__':
     unittest.main()
