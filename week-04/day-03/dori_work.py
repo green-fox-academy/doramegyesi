@@ -28,3 +28,16 @@ class Anagram:
             return True
         else:
             return False
+
+class Letter_counter:
+    def __init__(self, string):
+        self.string = string
+
+    def count_letters(self):
+        dic = {}
+        for letter in self.string:
+            if letter not in dic:
+                dic[letter] = 1
+            else:
+                dic[letter] += 1
+            return dic
