@@ -17,3 +17,14 @@ class Sum_stuff:
             return 0
         else:
             return numbers
+
+class Anagram:
+    def __init__(self, string1 = "", string2 = ""):
+        self.string1 = string1
+        self.string2 = string2
+
+    def anagram(self):
+        if "".join(sorted(self.string1)) == "".join(sorted(self.string2):
+            return True
+        else:
+            return False

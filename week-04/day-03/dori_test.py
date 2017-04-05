@@ -24,5 +24,8 @@ class TestSum_stuff(unittest.TestCase):
         new_individual = Sum_stuff([0])
         self.assertEqual(new_individual.sum_all(), 0)
 
+class TestAnagram:
+    def test_anagrams(self):
+
 if __name__ == '__main__':
     unittest.main()
