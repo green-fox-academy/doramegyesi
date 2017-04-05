@@ -23,8 +23,8 @@ class Anagram:
         self.string1 = string1
         self.string2 = string2
 
-    def anagram(self):
-        if "".join(sorted(self.string1)) == "".join(sorted(self.string2):
+    def anagrams(self):
+        if "".join(sorted(self.string1)) == "".join(sorted(self.string2)):
             return True
         else:
             return False

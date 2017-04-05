@@ -24,8 +24,10 @@ class TestSum_stuff(unittest.TestCase):
         new_individual = Sum_stuff([0])
         self.assertEqual(new_individual.sum_all(), 0)
 
-class TestAnagram:
+class TestAnagram(unittest.TestCase):
     def test_anagrams(self):
+        words = Anagram("dog", "god")
+        self.assertEqual(words.anagrams(), True)
 
 if __name__ == '__main__':
     unittest.main()
