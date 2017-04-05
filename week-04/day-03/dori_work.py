@@ -13,7 +13,7 @@ class Sum_stuff:
         numbers = 0
         for n in self.list_of_numbers:
             numbers += n
-        if numbers ==0:
-            return []
+        if numbers == 0:
+            return 0
         else:
             return numbers
