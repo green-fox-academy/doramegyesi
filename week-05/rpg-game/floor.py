@@ -11,7 +11,7 @@ class Tile():
         self.img_wall = PhotoImage(file = "wall.png")
 
     def draw(self):
-        first_square = canvas.create_image(0, 0, image = self.img_floor)
+        first_square = canvas.create_image(36, 36, image = self.img_floor)
 
 floor = Tile()
 floor.draw()
