@@ -46,6 +46,16 @@ class Characters():
     def draw_hero(self, x, y):
         canvas.create_image(x, y, anchor = NW, image = self.img_hero_down)
 
+    def on_key_press(self, e):
+        self.e = e
+        if self.e.keycode == 38:
+
+        elif self.e.keycode == 40:
+
+        elif self.e.keycode == 39:
+
+        elif self.e.keycode == 37:
+
 field = FieldMap()
 field.draw_map()
 hero = Characters()
