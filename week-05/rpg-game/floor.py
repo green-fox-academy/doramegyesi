@@ -3,7 +3,6 @@ from tkinter import *
 root = Tk()
 
 canvas = Canvas(root, width = 720, height = 720, background = "black")
-canvas.pack()
 
 map_1 = [
 	[0,0,1,0,0,1,0,0,1,0],
@@ -43,22 +42,29 @@ class Characters():
         self.position_x = 0
         self.position_y = 0
 
-    def draw_hero(self, x, y):
+    def draw_hero(self, x, y, img):
+        self.img = img
         canvas.create_image(x, y, anchor = NW, image = self.img_hero_down)
 
-    def on_key_press(self, e):
-        self.e = e
-        if self.e.keycode == 38:
-
-        elif self.e.keycode == 40:
-
-        elif self.e.keycode == 39:
-
-        elif self.e.keycode == 37:
+    def on_key_press(self, e): #e = KeyPress
+        if e.keycode == 38:
+            self.position_y -= 1
+            self.draw_hero(self.position_x, self.position_y, self.img_hero_up)
+        elif e.keycode == 40:
+            self.position_y += 1
+            self.draw_hero(self.position_x, self.position_y, self.img_hero_down)
+        elif e.keycode == 39:
+            self.position_x += 1
+            self.draw_hero(self.position_x, self.position_y, self.img_hero_right)
+        elif e.keycode == 37:
+            self.position_x -= 1
+            self.draw_hero(self.position_x, self.position_y, self.img.hero_left)
 
 field = FieldMap()
 field.draw_map()
 hero = Characters()
-hero.draw_hero(0,0)
+canvas.bind("<KeyPress>", hero.on_key_press)
+canvas.focus_set()
+canvas.pack()
 
 root.mainloop()
