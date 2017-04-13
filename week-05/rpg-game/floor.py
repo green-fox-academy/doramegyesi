@@ -41,13 +41,11 @@ class Characters():
         self.img_skeleton = PhotoImage(file = "skeleton.png")
         self.position_x = 0
         self.position_y = 0
+        self.draw_hero(self.position_x, self.position_y, self.img_hero_down)
 
     def draw_hero(self, x, y, img):
         self.img = img
-        canvas.create_image(x, y, anchor = NW, image = self.img_hero_up)
-        canvas.create_image(x, y, anchor = NW, image = self.img_hero_down)
-        canvas.create_image(x, y, anchor = NW, image = self.img_hero_right)
-        canvas.create_image(x, y, anchor = NW, image = self.img_hero_left)
+        canvas.create_image(x, y, anchor = NW, image = self.img)
 
     def move_the_hero(self, e): #e = KeyPress
         if e.keycode == 38:
