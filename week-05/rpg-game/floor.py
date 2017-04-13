@@ -44,9 +44,12 @@ class Characters():
 
     def draw_hero(self, x, y, img):
         self.img = img
+        canvas.create_image(x, y, anchor = NW, image = self.img_hero_up)
         canvas.create_image(x, y, anchor = NW, image = self.img_hero_down)
+        canvas.create_image(x, y, anchor = NW, image = self.img_hero_right)
+        canvas.create_image(x, y, anchor = NW, image = self.img_hero_left)
 
-    def on_key_press(self, e): #e = KeyPress
+    def move_the_hero(self, e): #e = KeyPress
         if e.keycode == 38:
             self.position_y -= 72
             self.draw_hero(self.position_x, self.position_y, self.img_hero_up)
@@ -58,12 +61,12 @@ class Characters():
             self.draw_hero(self.position_x, self.position_y, self.img_hero_right)
         elif e.keycode == 37:
             self.position_x -= 72
-            self.draw_hero(self.position_x, self.position_y, self.img.hero_left)
+            self.draw_hero(self.position_x, self.position_y, self.img_hero_left)
 
 field = FieldMap()
 field.draw_map()
 hero = Characters()
-canvas.bind("<KeyPress>", hero.on_key_press)
+canvas.bind("<KeyPress>", hero.move_the_hero)
 canvas.focus_set()
 canvas.pack()
 
