@@ -48,16 +48,16 @@ class Characters():
 
     def on_key_press(self, e): #e = KeyPress
         if e.keycode == 38:
-            self.position_y -= 1
+            self.position_y -= 72
             self.draw_hero(self.position_x, self.position_y, self.img_hero_up)
         elif e.keycode == 40:
-            self.position_y += 1
+            self.position_y += 72
             self.draw_hero(self.position_x, self.position_y, self.img_hero_down)
         elif e.keycode == 39:
-            self.position_x += 1
+            self.position_x += 72
             self.draw_hero(self.position_x, self.position_y, self.img_hero_right)
         elif e.keycode == 37:
-            self.position_x -= 1
+            self.position_x -= 72
             self.draw_hero(self.position_x, self.position_y, self.img.hero_left)
 
 field = FieldMap()
