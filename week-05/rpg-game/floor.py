@@ -1,7 +1,6 @@
 from tkinter import *
 
 root = Tk()
-
 canvas = Canvas(root, width = 720, height = 720, background = "black")
 
 map_1 = [
@@ -41,16 +40,15 @@ class Characters():
         self.img_skeleton = PhotoImage(file = "skeleton.png")
         self.position_x = 0
         self.position_y = 0
-        self.draw_hero(self.position_x, self.position_y, self.img_hero_down)
-        self.delete = 0
+        self.first_hero()
+
+    def first_hero(self):
+        self.hero = canvas.create_image(self.position_x, self.position_y, anchor = NW, image = self.img_hero_down)
 
     def draw_hero(self, x, y, img):
         self.img = img
-        canvas.create_image(x, y, anchor = NW, image = self.img)
-
-    def delete_hero(self, x, y, img):
-        canvas.delete(self.delete)
-        self.delete = canvas.create_image(x, y, anchor = NW, image = self.img)
+        canvas.delete(self.hero)
+        self.hero = canvas.create_image(x, y, anchor = NW, image = self.img)
 
     def move_the_hero(self, e): #e = KeyPress
         if e.keycode == 38:
