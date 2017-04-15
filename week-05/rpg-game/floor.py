@@ -41,6 +41,9 @@ class Characters():
         self.position_x = 0
         self.position_y = 0
         self.first_hero()
+        self.draw_skeleton(144, 216, img = self.img_skeleton)
+        self.draw_skeleton(288, 576, img = self.img_skeleton)
+        self.draw_skeleton(504, 72, img = self.img_skeleton)
 
     def first_hero(self):
         self.hero = canvas.create_image(self.position_x, self.position_y, anchor = NW, image = self.img_hero_down)
@@ -49,6 +52,10 @@ class Characters():
         self.img = img
         canvas.delete(self.hero)
         self.hero = canvas.create_image(x, y, anchor = NW, image = self.img)
+
+    def draw_skeleton(self, x, y, img):
+        self.img = img
+        self.skeleton = canvas.create_image(x, y, anchor = NW, image = self.img)
 
     def move_the_hero(self, e): #e = KeyPress
         if e.keycode == 38:
