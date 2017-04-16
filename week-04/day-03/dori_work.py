@@ -52,3 +52,13 @@ class Fibonacci:
             return numbers
         else:
             return self.fibonacci(numbers -1) + self.fibonacci(numbers -2)
+
+class Sharpie():
+    def __init__(self, color = "black", width = 0.0):
+        self.inkAmount = 100.0
+        self.color = color
+        self.width = width
+
+    def use(self, amount = 15.5):
+        self.inkAmount -= amount
+        return self.inkAmount

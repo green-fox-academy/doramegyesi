@@ -39,5 +39,10 @@ class TestFibonacci(unittest.TestCase):
         number = Fibonacci(5)
         self.assertEqual(number.fibonacci(5), 5)
 
+class TestSharpie(unittest.TestCase):
+    def test_use(self):
+        sharp = Sharpie("blue", 8.1)
+        self.assertEqual(sharp.use(), 84.5)
+
 if __name__ == '__main__':
     unittest.main()
