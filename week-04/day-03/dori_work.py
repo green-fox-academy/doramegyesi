@@ -40,7 +40,7 @@ class LetterCounter:
                 dic[letter] = 1
             else:
                 dic[letter] += 1
-            return dic
+        return dic
 
 class Fibonacci:
     def __init__(self, numbers):
