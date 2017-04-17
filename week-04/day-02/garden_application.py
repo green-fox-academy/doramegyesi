@@ -31,6 +31,7 @@ class Garden():
         for n in self.trees:
             if n[1] < 10:
                 n[1] += divided_water_amount * 0.4
+        print("watering with", water_amount)
 
 class Flower(Garden):
     def __init__(self, color, water_level = 0):
