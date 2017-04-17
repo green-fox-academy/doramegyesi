@@ -8,7 +8,7 @@ class Aircraft():
 
     def fight(self):
         damage = self.ammo * self.base_damage
-        ammo = 0
+        self.ammo = 0 #resets the ammo after refill too, FIX IT, MAN!!!
         return damage
 
     def refill(self, given_ammo):
@@ -26,18 +26,14 @@ class Aircraft():
 
     def get_status(self):
         damage = self.fight()
-        status = "type:", str(self.type_of_aircraft), "ammo:", str(self.ammo), "base_damage:", str(self.base_damage), "all damage:", str(damage)
+        status = "type: " + str(self.type_of_aircraft) + ", ammo: " + str(self.ammo) + ", base_damage: " + str(self.base_damage) + ", all damage: " + str(self.ammo * self.base_damage)
         return status
 
-#class F16(Aircraft):
-#    def __init__(self, type_of_aircraft, ammo = 0, max_ammo = 8, base_damage =30):
-#        pass
 
-#class F35(Aircraft):
-#    def __init__(self, type_of_aircraft, ammo = 0, max_ammo = 12, base_damage = 50):
-#        pass
 
 aircraft_one = Aircraft("F16", 0, 8, 30)
 aircraft_two = Aircraft("F35", 0, 12, 50)
 print(aircraft_one.refill(100))
+print(aircraft_one.get_status())
+print(aircraft_one.fight())
 print(aircraft_one.get_status())
