@@ -10,24 +10,24 @@ class Aircraft():
         damage = self.ammo * self.base_damage
         ammo = 0
         return damage
-        #resets ammo to 0
-        #returns damage
-        #damage = base damage * ammo
 
     def refill(self, given_ammo):
         self.given_ammo = given_ammo
-        #from the given number it takes as much ammo as it can
-        #max the max ammo
-        #returns ramaining ammo
-        pass
+        if given_ammo <= self.max_ammo:
+            self.ammo += given_ammo
+            given_ammo -= self.ammo
+            return given_ammo
+        elif given_ammo > self.max_ammo:
+            self.ammo == self.max_ammo
+            given_ammo -= self.max_ammo
+            return given_ammo
 
     def get_type(self):
-        #returns type as string
-        pass
+        return self.type_of_aircraft
 
     def get_status(self):
-        #returns type, ammo, base damage and all damage as string
-        pass
+        status = "type:", self.type_of_aircraft, "ammo:", self.ammo, "base_damage:", self.base_damage, "all damage:" #all damage here
+        return status
 
 class F16(Aircraft):
     def __init__(self):
