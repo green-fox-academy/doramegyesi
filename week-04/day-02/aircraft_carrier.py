@@ -17,7 +17,7 @@ class Aircraft():
             self.ammo += given_ammo
             given_ammo -= self.ammo
         elif given_ammo > self.max_ammo:
-            self.ammo == self.max_ammo
+            self.ammo = self.max_ammo
             given_ammo -= self.max_ammo
             return given_ammo
 
