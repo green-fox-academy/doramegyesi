@@ -2,6 +2,14 @@ class Garden():
     flowers = []
     trees = []
 
+    def total_plants(self):
+        total = 0
+        for n in self.flowers:
+            total += 1
+        for n in self.trees:
+            total += 1
+        return total
+
     def print_status(self):
         for n in self.flowers:
             if n[1] < 5:
@@ -42,3 +50,4 @@ tree_two = Tree("orange")
 Garden.print_status(Garden)
 Garden.watering_plants(Garden, 40)
 Garden.print_status(Garden)
+print(Garden.total_plants(Garden))
