@@ -8,7 +8,7 @@ class Aircraft():
 
     def fight(self):
         damage = self.ammo * self.base_damage
-        self.ammo = 0 #resets the ammo after refill too, FIX IT, MAN!!!
+        self.ammo = 0
         return damage
 
     def refill(self, given_ammo):
@@ -25,11 +25,35 @@ class Aircraft():
         return self.type_of_aircraft
 
     def get_status(self):
-        damage = self.fight()
         status = "type: " + str(self.type_of_aircraft) + ", ammo: " + str(self.ammo) + ", base_damage: " + str(self.base_damage) + ", all damage: " + str(self.ammo * self.base_damage)
         return status
 
+class AircraftCarrier():
+    #should store the aircrafts in a list
+    #store of ammo as a number
+    #initial ammo in constructor
+    #health point as a number
+    def __init__(self):
+        pass
 
+    def add_aircraft(self):
+        #adds the aircraft to the list
+        pass
+
+    def fill(self):
+        #fills the aircrafts and takes the ammo needed from storage
+        #for F35 first if there isnt enough for all the aircrafts
+        #exception handling (if storage is empty)
+        pass
+
+    def fight(self):
+        #no idea what it should do exactly
+        pass
+
+    def get_status(self):
+        #gives a status of the carrier ans all the aircrafts like above
+        #if health point is 0 then print it's dead Jim :(
+        pass
 
 aircraft_one = Aircraft("F16", 0, 8, 30)
 aircraft_two = Aircraft("F35", 0, 12, 50)
