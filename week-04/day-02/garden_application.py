@@ -24,12 +24,13 @@ class Garden():
 
     def watering_plants(self, water_amount):
         self.water_amount = water_amount
+        divided_water_amount = water_amount / self.total_plants()
         for n in self.flowers:
             if n[1] < 5:
-                n[1] += water_amount * 0.75
+                n[1] += divided_water_amount * 0.75
         for n in self.trees:
             if n[1] < 10:
-                n[1] += water_amount * 0.4
+                n[1] += divided_water_amount * 0.4
 
 class Flower(Garden):
     def __init__(self, color, water_level = 0):
@@ -43,11 +44,13 @@ class Tree(Garden):
         self.water_level = water_level
         self.trees.append([self.color, self.water_level])
 
+garden = Garden()
 flower_one =  Flower("yellow")
 flower_two = Flower("blue")
 tree_one = Tree("purple")
 tree_two = Tree("orange")
-Garden.print_status(Garden)
-Garden.watering_plants(Garden, 40)
-Garden.print_status(Garden)
-print(Garden.total_plants(Garden))
+garden.print_status()
+garden.watering_plants(40)
+garden.print_status()
+garden.watering_plants(70)
+garden.print_status()
