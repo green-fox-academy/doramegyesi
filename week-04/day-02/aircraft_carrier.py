@@ -4,7 +4,6 @@ class Aircraft():
         self.ammo = ammo
         self.max_ammo = max_ammo
         self.base_damage = base_damage
-        pass
 
     def fight(self):
         damage = self.ammo * self.base_damage
@@ -16,6 +15,7 @@ class Aircraft():
         if given_ammo <= self.max_ammo:
             self.ammo += given_ammo
             given_ammo -= self.ammo
+            return given_ammo
         elif given_ammo > self.max_ammo:
             self.ammo = self.max_ammo
             given_ammo -= self.max_ammo
@@ -30,12 +30,11 @@ class Aircraft():
         return status
 
 class AircraftCarrier():
-    #store of ammo as a number
-    def __init__(self, all_the_aircrafts, initial_ammo, health_point):
+    def __init__(self, initial_ammo):
         self.all_the_aircrafts = []
         self.initial_ammo = initial_ammo
-        self.health_point = health_point
-        pass
+        self.stored_ammo = 5000
+        self.health_point = 800
 
     def add_aircraft(self):
         if type_of_aircraft == "F16":
@@ -46,19 +45,26 @@ class AircraftCarrier():
             print("no such aircraft exists")
 
     def fill(self):
-        #fills the aircrafts and takes the ammo needed from storage
-        #for F35 first if there isnt enough for all the aircrafts
-        #else:
-        #    print("the ammo storage is empty!")
-        pass
+        if self.stored_ammo == 0:
+            print("the ammo storage is empty!")
+        else:
+            for n in all_the_aircrafts:
+                if get_type == "F35":
+                #refill
+                    pass
+            for n in all_the_aircrafts:
+                if get_type == "F16":
+                #refill it dude
+                    pass
 
     def fight(self):
         #no idea what it should do exactly
         pass
 
     def get_status(self):
+        if self.health_point <= 0:
+            print("It's dead, Jim:(")
         #gives a status of the carrier ans all the aircrafts like above
-        #if health point is 0 then print it's dead Jim :(
         pass
 
 aircraft_one = Aircraft("F16", 0, 8, 30)
