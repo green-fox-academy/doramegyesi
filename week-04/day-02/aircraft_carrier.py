@@ -26,24 +26,30 @@ class Aircraft():
 
     def get_status(self):
         status = "type: " + str(self.type_of_aircraft) + ", ammo: " + str(self.ammo) + ", base_damage: " + str(self.base_damage) + ", all damage: " + str(self.ammo * self.base_damage)
+            #prints all damage wrong, needs to be fixed!!!
         return status
 
 class AircraftCarrier():
-    #should store the aircrafts in a list
     #store of ammo as a number
-    #initial ammo in constructor
-    #health point as a number
-    def __init__(self):
+    def __init__(self, all_the_aircrafts, initial_ammo, health_point):
+        self.all_the_aircrafts = []
+        self.initial_ammo = initial_ammo
+        self.health_point = health_point
         pass
 
     def add_aircraft(self):
-        #adds the aircraft to the list
-        pass
+        if type_of_aircraft == "F16":
+            self.all_the_aircrafts.append() #what the hell should I append here
+        elif type_of_aircraft == "F35":
+            self.all_the_aircrafts.append() #and here too
+        else:
+            print("no such aircraft exists")
 
     def fill(self):
         #fills the aircrafts and takes the ammo needed from storage
         #for F35 first if there isnt enough for all the aircrafts
-        #exception handling (if storage is empty)
+        #else:
+        #    print("the ammo storage is empty!")
         pass
 
     def fight(self):
