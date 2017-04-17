@@ -14,6 +14,15 @@ class Garden():
             else:
                 print("the", n[0], "tree does not need water")
 
+    def watering_plants(self, water_amount = 0):
+        self.water_amount = water_amount
+        for n in self.flowers:
+            if n[1] < 5:
+                n[1] == n[1] + water_amount * 0.75
+        for n in self.trees:
+            if n[1] < 10:
+                n[1] == n[1] + water_amount * 0.4
+
 class Flower(Garden):
     def __init__(self, color, water_level = 0):
         self.color = color
@@ -27,7 +36,9 @@ class Tree(Garden):
         self.trees.append([self.color, self.water_level])
 
 flower_one =  Flower("yellow")
-flower_two = Flower("blue", 10)
+flower_two = Flower("blue")
 tree_one = Tree("purple")
-tree_two = Tree("orange", 15)
+tree_two = Tree("orange")
+Garden.print_status(Garden)
+Garden.watering_plants(40)
 Garden.print_status(Garden)
