@@ -58,18 +58,21 @@ class AircraftCarrier():
         else:
             print("no such aircraft exists")
 
-    def fill(self):
+    def fill(self, get_type):
         if self.stored_ammo == 0:
             print("the ammo storage is empty!")
         else:
-            for n in all_the_aircrafts:
-                if get_type == "F35":
-                #refill
-                    pass
-            for n in all_the_aircrafts:
-                if get_type == "F16":
+            if get_type == "F35":
+                if self.stored_ammo <= aircraft_two.max_ammo:
+                    aircraft_two.ammo += self.stored_ammo
+                    self.stored_ammo -= aircraft_two.ammo
+                elif self.stored_ammo > aircraft_two.max_ammo:
+                    aircraft_two.ammo = aircraft_two.max_ammo
+                    self.stored_ammo -= aircraft_two.max_ammo
+            #for n in all_the_aircrafts:
+            #    if get_type == "F16":
                 #refill it dude
-                    pass
+            #        pass
 
     def fight(self):
         #no idea what it should do exactly
@@ -91,3 +94,5 @@ print(aircraft_one.refill(100))
 print(aircraft_one.get_status())
 print(aircraft_one.fight())
 print(aircraft_one.get_status())
+carrier.fill("F35")
+print(aircraft_two.get_status())
