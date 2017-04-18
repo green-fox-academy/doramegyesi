@@ -29,6 +29,20 @@ class Aircraft():
             #prints all damage wrong, needs to be fixed!!!
         return status
 
+class F16(Aircraft):
+    def __init__(self, type_of_aircraft, ammo, max_ammo, base_damage):
+        self.type_of_aircraft = type_of_aircraft
+        self.ammo = 0
+        self.max_ammo = 8
+        self.base_damage = 30
+
+class F35(Aircraft):
+    def __init__(self, type_of_aircraft, ammo, max_ammo, base_damage):
+        self.type_of_aircraft = type_of_aircraft
+        self.ammo = 0
+        self.max_ammo = 12
+        self.base_damage = 50
+
 class AircraftCarrier():
     def __init__(self, initial_ammo = 0):
         self.all_the_aircrafts = []
