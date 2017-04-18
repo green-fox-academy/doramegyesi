@@ -30,17 +30,17 @@ class Aircraft():
         return status
 
 class AircraftCarrier():
-    def __init__(self, initial_ammo):
+    def __init__(self, initial_ammo = 0):
         self.all_the_aircrafts = []
         self.initial_ammo = initial_ammo
         self.stored_ammo = 5000
         self.health_point = 800
 
-    def add_aircraft(self):
+    def add_aircraft(self, type_of_aircraft = ""):
         if type_of_aircraft == "F16":
-            self.all_the_aircrafts.append() #what the hell should I append here
+            self.all_the_aircrafts.append("F16") #what the hell should I append here
         elif type_of_aircraft == "F35":
-            self.all_the_aircrafts.append() #and here too
+            self.all_the_aircrafts.append("F35") #and here too
         else:
             print("no such aircraft exists")
 
@@ -67,6 +67,10 @@ class AircraftCarrier():
         #gives a status of the carrier ans all the aircrafts like above
         pass
 
+carrier = AircraftCarrier(80)
+carrier.add_aircraft("F16")
+carrier.add_aircraft("F35")
+print(carrier.all_the_aircrafts)
 aircraft_one = Aircraft("F16", 0, 8, 30)
 aircraft_two = Aircraft("F35", 0, 12, 50)
 print(aircraft_one.refill(100))
