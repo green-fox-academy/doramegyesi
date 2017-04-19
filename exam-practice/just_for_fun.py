@@ -4,6 +4,7 @@ class Song():
     def __init__(self, title = "", author = ""):
         self.title = title
         self.author = author
+        song = str(self.title) + "," + str(self.author)
 
 # It should have 2 methods:
 # one should add a rating to the song, the rating should be a number between 1 and 5
@@ -11,7 +12,7 @@ class Song():
     def add_rating(self):
         pass
 
-# The other should return the average rating of the book (the average of all the rates)
+# The other should return the average of all the rates
     def average_rating(self):
         pass
 
