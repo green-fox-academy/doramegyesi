@@ -25,14 +25,9 @@ class Song():
     def add_rating(self, rating):
         if rating >= 5:
             rating = 5
-        elif rating == 4:
-            rating = 4
-        elif rating == 3:
-            rating = 3
-        elif rating == 2:
-            rating = 2
-        else:
+        elif rating <= 1:
             rating = 1
+
         self.all_the_ratings.append(rating) #exception handling would be nice if rating is a str
 
     def average_rating(self):
@@ -42,8 +37,8 @@ class Jukebox():
     def __init__(self):
         self.all_the_songs = []
 
-    def add_songs(self):
-        new_song = ""
+    def add_songs(self, new_song):
+        self.new_song = ""
         self.all_the_songs.append(new_song)
 
     def rate_song(self):
@@ -59,5 +54,6 @@ song = Song("The Pretender", "Foo Fighters")
 print(song)
 song.add_rating(-3)
 song.add_rating(100)
+song.add_rating(3)
 print(song.average_rating())
 print(song.all_the_ratings)
