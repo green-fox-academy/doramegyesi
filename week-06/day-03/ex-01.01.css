@@ -1,9 +1,28 @@
+
+body {
+  width: 1200px;
+}
+
 .container {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
+  width: 610px;
+  height: 200px;
 }
 
 .item {
-  align-self: flex-end;
+  width: 200px;
+  height: 200px;
+}
+
+.green {
+  background-color: #51D400;
+}
+
+.yellow {
+  background-color: #FFD62A;
+}
+
+.purple {
+  background-color: #B02AFF;
 }
