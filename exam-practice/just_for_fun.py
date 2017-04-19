@@ -18,13 +18,15 @@ class Song():
 
 # Create a Jukebox class
 # it should store the songs in an array
-class Jukebox(Song): #or not a subclass, tbd
-    def __init__(self, songs):
-        self.songs = []
+class Jukebox():
+    def __init__(self):
+        self.all_the_songs = []
 
 # it should have a method add a song
     def add_songs(self):
-        pass
+        new_song = ""
+        self.all_the_songs.append(new_song)
+
 
 # it should have a method to rate the song with the given title
     def rate_song(self):
@@ -37,3 +39,5 @@ class Jukebox(Song): #or not a subclass, tbd
 # it should hame a method that returns the top rated songs title
     def top_rated_songs(self):
         pass
+
+song = Song("abc", "zenekar")
