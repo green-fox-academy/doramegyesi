@@ -4,8 +4,10 @@ class Song():
     def __init__(self, title = "", author = ""):
         self.title = title
         self.author = author
-        song = str(self.title) + "," + str(self.author)
         self.all_the_ratings = []
+
+    def __repr__(self):
+        return str(self.title) + ", by " + str(self.author)
 
 # It should have 2 methods:
 # one should add a rating to the song, the rating should be a number between 1 and 5
@@ -21,11 +23,12 @@ class Song():
             rating = 2
         else:
             rating = 1
-        self.all_the_ratings.append(rating)
+        self.all_the_ratings.append(rating) #exception handling would be nice
 
 # The other should return the average of all the rates
     def average_rating(self):
-        pass
+        for rtng in self.all_the_ratings:
+            pass
 
 # Create a Jukebox class
 # it should store the songs in an array
@@ -37,7 +40,6 @@ class Jukebox():
     def add_songs(self):
         new_song = ""
         self.all_the_songs.append(new_song)
-
 
 # it should have a method to rate the song with the given title
     def rate_song(self):
@@ -51,6 +53,7 @@ class Jukebox():
     def top_rated_songs(self):
         pass
 
-song = Song("abc", "zenekar")
+song = Song("The Pretender", "Foo Fighters")
+print(song)
 song.add_rating(-3) #must be a nickelback song
 print(song.all_the_ratings)
