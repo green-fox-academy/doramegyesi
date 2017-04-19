@@ -11,14 +11,17 @@ class Song():
 # one should add a rating to the song, the rating should be a number between 1 and 5
 # if it is higher it should take it as 5 and if it is take it as 1
     def add_rating(self, rating):
-        if self.rating >= 5:
-            self.rating = 5
-            self.all_the_ratings.append(rating)
+        if rating >= 5:
+            rating = 5
+        elif rating == 4:
+            rating = 4
+        elif rating == 3:
+            rating = 3
+        elif rating == 2:
+            rating = 2
         else:
-            self.rating = 1
-            self.all_the_ratings.append(rating)
-
-
+            rating = 1
+        self.all_the_ratings.append(rating)
 
 # The other should return the average of all the rates
     def average_rating(self):
@@ -49,3 +52,5 @@ class Jukebox():
         pass
 
 song = Song("abc", "zenekar")
+song.add_rating(-3) #must be a nickelback song
+print(song.all_the_ratings)
