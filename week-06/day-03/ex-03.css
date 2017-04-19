@@ -4,6 +4,7 @@
     height: 300px;
     background-color: #FFD62A;
     list-style-type: none;
+    justify-content: space-between;
 }
 
 .item {
