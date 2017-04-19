@@ -3,6 +3,7 @@
     width: 100%;
     height: 300px;
     background-color: #FFD62A;
+    list-style-type: none;
 }
 
 .item {
