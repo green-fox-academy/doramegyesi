@@ -11,15 +11,15 @@
 
 .green {
   background-color: #51D400;
-  width: 25%
+  flex-grow: 1;
 }
 
 .yellow {
   background-color: #FFD62A;
-  width: 50%
+  flex-grow: 2;
 }
 
 .purple {
   background-color: #B02AFF;
-  width: 25%
+  flex-grow: 1;
 }
