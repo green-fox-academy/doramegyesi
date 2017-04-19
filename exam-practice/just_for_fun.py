@@ -36,10 +36,7 @@ class Song():
         self.all_the_ratings.append(rating) #exception handling would be nice if rating is a str
 
     def average_rating(self):
-        sum_of_ratings = 0
-        for rtng in self.all_the_ratings:
-            sum_of_ratings += rtng
-        return sum_of_ratings/len(self.all_the_ratings) #exception handling would be nice for 0 division
+        return sum(self.all_the_ratings)/len(self.all_the_ratings) #exception handling would be nice for 0 division
 
 class Jukebox():
     def __init__(self):
