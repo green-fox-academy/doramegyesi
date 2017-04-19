@@ -1,9 +1,9 @@
 
 .container {
   display: flex;
-  width: 2500px
+  width: 800px;
   height: 200px;
-  flex-flow: column;
+  flex-direction: column;
 }
 
 .item {
