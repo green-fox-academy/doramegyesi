@@ -23,11 +23,11 @@ class Song():
         return str(self.title) + ", by " + str(self.author)
 
     def add_rating(self, rating):
+        self.rating = rating
         if rating >= 5:
             rating = 5
         elif rating <= 1:
             rating = 1
-
         self.all_the_ratings.append(rating) #exception handling would be nice if rating is a str
 
     def average_rating(self):
