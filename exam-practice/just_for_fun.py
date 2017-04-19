@@ -5,12 +5,20 @@ class Song():
         self.title = title
         self.author = author
         song = str(self.title) + "," + str(self.author)
+        self.all_the_ratings = []
 
 # It should have 2 methods:
 # one should add a rating to the song, the rating should be a number between 1 and 5
 # if it is higher it should take it as 5 and if it is take it as 1
-    def add_rating(self):
-        pass
+    def add_rating(self, rating):
+        if self.rating >= 5:
+            self.rating = 5
+            self.all_the_ratings.append(rating)
+        else:
+            self.rating = 1
+            self.all_the_ratings.append(rating)
+
+
 
 # The other should return the average of all the rates
     def average_rating(self):
