@@ -54,8 +54,11 @@ class Jukebox():
         b = Song()
         if self.author == author:
             list_of_titles += self.b.song
+        return list_of_titles
 
     def top_rated_songs(self):
+        #maybe create a list of the average ratings and use the max() method
+        c = Song()
         pass
 
 song = Song("The Pretender", "Foo Fighters")
