@@ -18,6 +18,7 @@ class Song():
         self.title = title
         self.author = author
         self.all_the_ratings = []
+        self.song = str(self.title) + ", by " + str(self.author)
 
     def __repr__(self):
         return str(self.title) + ", by " + str(self.author)
@@ -41,8 +42,9 @@ class Jukebox():
         self.all_the_songs = []
 
     def add_songs(self, new_song):
+        a = Song()
         self.new_song = ""
-        self.all_the_songs.append(new_song)
+        self.all_the_songs.append(a.song)
 
     def rate_song(self):
         pass
