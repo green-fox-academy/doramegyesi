@@ -47,7 +47,7 @@ class Jukebox():
     def rate_song(self):
         pass
 
-    def list_of_songs_of_an_artist(self): #or not that
+    def list_of_songs_of_an_artist(self):
         pass
 
     def top_rated_songs(self):
@@ -57,6 +57,8 @@ song = Song("The Pretender", "Foo Fighters")
 print(song)
 song.add_rating(-3)
 song.add_rating(100)
-song.add_rating(3)
 print(song.average_rating())
 print(song.all_the_ratings)
+new = Jukebox()
+new.add_songs("Deftones")
+print(new.all_the_songs)
