@@ -50,7 +50,10 @@ class Jukebox():
         pass
 
     def list_of_songs_of_an_artist(self):
-        pass
+        list_of_titles = []
+        b = Song()
+        if self.author == author:
+            list_of_titles += self.b.song
 
     def top_rated_songs(self):
         pass
