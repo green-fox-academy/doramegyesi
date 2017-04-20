@@ -1,14 +1,22 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
 .container {
     display: flex;
-    flex-basis: auto;
+    flex-basis: row;
     height: 300px;
     background-color: #FFD62A;
     list-style-type: none;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .item {
     width: 100px;
     height: 100px;
     background-color: #B02AFF;
+    margin: 5px;
 }
