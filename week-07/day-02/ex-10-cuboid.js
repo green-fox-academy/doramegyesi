@@ -6,9 +6,9 @@
 // Surface Area: 600
 // Volume: 1000
 
-var cuboidLength = 11
-var cuboidWidth = 8
-var cuboidHeight = 17
+var cuboidLength = 11;
+var cuboidWidth = 8;
+var cuboidHeight = 17;
 
-console.log('Surface Area: ', 2 * (cuboidLength * cuboidWidth + cuboidLength * cuboidHeight + cuboidWidth * cuboidHeight))
-console.log('Volume: ', cuboidWidth * cuboidLength * cuboidHeight)
+console.log('Surface Area: ', 2 * (cuboidLength * cuboidWidth + cuboidLength * cuboidHeight + cuboidWidth * cuboidHeight));
+console.log('Volume: ', cuboidWidth * cuboidLength * cuboidHeight);
