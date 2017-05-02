@@ -4,4 +4,4 @@
 // And print it like this: 'My favorite number is: 8'
 
 var favoriteNumber = 21;
-console.log('My favorite number is: ', favoriteNumber)
+console.log('My favorite number is: ', favoriteNumber);
