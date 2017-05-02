@@ -11,6 +11,6 @@
 //  31
 //  1.87
 
-console.log('Dora')
-console.log(31)
-console.log(1.62)
+console.log('Dora');
+console.log(31);
+console.log(1.62);

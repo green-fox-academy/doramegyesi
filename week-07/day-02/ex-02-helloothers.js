@@ -8,6 +8,6 @@
 // Hello, Mary!
 // Hello, Joe!
 
-console.log('Hello, Ron Swanson!')
-console.log('Hello, Maurice Moss!')
-console.log('Hello, Dwight Schrute!')
+console.log('Hello, Ron Swanson!');
+console.log('Hello, Maurice Moss!');
+console.log('Hello, Dwight Schrute!');
