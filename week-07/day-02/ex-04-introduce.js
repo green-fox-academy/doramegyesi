@@ -11,6 +11,6 @@
 //  31
 //  1.87
 
-console.log('My name is Dora.')
-console.log('I am really old and wise.')
-console.log("My height is about 1.62.")
+console.log('Dora')
+console.log(31)
+console.log(1.62)
