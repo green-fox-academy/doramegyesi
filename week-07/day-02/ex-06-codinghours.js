@@ -17,3 +17,8 @@ var totalCodingHours = semester * workdaysPerWeek * dailyCodingHours
 
 console.log('Hours spent with coding: ', totalCodingHours)
 console.log('Average: ', (dailyCodingHours * workdaysPerWeek / 52) * 100, '%')
+
+// without variables
+
+console.log('Hours spent with coding: ', 17 * 5 * 6)
+console.log('Average: ', (6 * 5 / 52) * 100, '%')
