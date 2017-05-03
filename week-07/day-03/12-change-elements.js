@@ -6,7 +6,7 @@
 var s = [1, 2, 3, 8, 5, 6];
 
 var change = s.map(function(element) {
-    if (element = 8) {
+    if (element === 8) {
         return 4;
     };
     return change;
