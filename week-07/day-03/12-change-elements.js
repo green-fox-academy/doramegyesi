@@ -14,4 +14,4 @@ var change = s.map(function(n) {
 })
 
 console.log(change);
-console.log(change[3])
+console.log(change[3]);
