@@ -5,11 +5,13 @@
 
 var s = [1, 2, 3, 8, 5, 6];
 
-var change = s.map(function(element) {
-    if (element === 8) {
+var change = s.map(function(n) {
+    if (n === 8) {
         return 4;
-    };
-    return change;
+    } else {
+        return n;
+    }
 })
 
 console.log(change);
+console.log(change[3])
