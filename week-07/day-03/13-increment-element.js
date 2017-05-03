@@ -4,12 +4,7 @@
 // - Log the third element to the console
 
 var t = [1, 2, 3, 4, 5];
+t[2] += 1
 
-var incremented = t.map(function(n) {
-    for (n; n < t.length; n++) {
-        return incremented;
-    }
-})
-
-console.log(incremented);
-console.log(incremented[2])
+console.log(t);
+console.log(t[2])
