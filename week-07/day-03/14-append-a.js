@@ -9,7 +9,13 @@ var animals = nimals.map(function(element) {
     return nimals[element] += 'a';
 })*/
 
+/*var nimals = ['kuty', 'macsk', 'cic'];
+var animals = nimals.join('a')*/
+
+
 var nimals = ['kuty', 'macsk', 'cic'];
-var animals = nimals.join('a')
+var animals = nimals.forEach(function(element) {
+    return nimals[element] += 'a';
+})
 
 console.log(animals);
