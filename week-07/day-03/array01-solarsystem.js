@@ -4,6 +4,6 @@
 // bonus for using some built in methods
 
 var planetList = ["Mercury","Venus","Earth","Mars","Jupiter","Uranus","Neptune"];
-planetList = planetList.splice(5, 0, 'Saturn');
+var newPlanetList = planetList.splice(5, 0, 'Saturn');
 
 console.log(planetList);
