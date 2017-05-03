@@ -4,9 +4,12 @@
 // - Add all elements an `"a"` at the end
 // - try to use built in functions instead of loops
 
-var nimals = ['kuty', 'macsk', 'cic'];
-
+/*var nimals = ['kuty', 'macsk', 'cic'];
 var animals = nimals.map(function(element) {
     return nimals[element] += 'a';
-})
-console.log(nimals);
+})*/
+
+var nimals = ['kuty', 'macsk', 'cic'];
+var animals = nimals.join('a')
+
+console.log(animals);
