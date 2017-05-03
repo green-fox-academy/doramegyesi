@@ -3,8 +3,7 @@
 // Also, the URL is missing a crutial component, find out what it is and insert it too!
 
 var url = 'https//www.reddit.com/r/nevertellmethebots';
-
-var missingThingy = ':'
+var missingThingy = ':';
 
 url = [url.slice(0, 4), missingThingy, url.slice(5)].join('');
 url = [url.slice('').replace(/bots/i, 'odds')].join('');
