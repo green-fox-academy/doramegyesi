@@ -15,7 +15,7 @@ var animals = nimals.join('a')*/
 
 var nimals = ['kuty', 'macsk', 'cic'];
 var animals = nimals.map(function(element) {
-    return nimals[element] += 'a';
+    return element + 'a';
 })
 
 console.log(animals);
