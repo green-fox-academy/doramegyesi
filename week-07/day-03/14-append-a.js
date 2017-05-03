@@ -14,7 +14,7 @@ var animals = nimals.join('a')*/
 
 
 var nimals = ['kuty', 'macsk', 'cic'];
-var animals = nimals.forEach(function(element) {
+var animals = nimals.map(function(element) {
     return nimals[element] += 'a';
 })
 
