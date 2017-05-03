@@ -11,6 +11,6 @@ function factorio(num) {
     return total;
 }
 
-console.log(factorio(3))
-console.log(factorio(8))
-console.log(factorio(21))
+console.log(factorio(3));
+console.log(factorio(8));
+console.log(factorio(21));
