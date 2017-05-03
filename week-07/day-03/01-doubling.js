@@ -3,11 +3,11 @@
 // - Create a function called `doubling` that doubles it's input parameter
 // - Log the result of `doubling(ak)` to the console
 
-var ak = 123
+var ak = 123;
 
 function doubling(i) {
     i *= 2;
-    console.log(i)
+    console.log(i);
 }
 
-doubling(ak)
+doubling(ak);
