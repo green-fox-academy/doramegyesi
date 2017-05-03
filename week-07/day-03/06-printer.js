@@ -6,9 +6,9 @@
 function printer(inputs) {
     var output = '';
     for (var p = 0; p < arguments.length; p++) {
-        output += arguments[p]
+        output += arguments[p];
     }
     return output;
 }
 
-console.log(printer('ice', 'ice', 'baby'))
+console.log(printer('ice', 'ice', 'baby'));
