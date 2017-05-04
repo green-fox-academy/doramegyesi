@@ -35,3 +35,6 @@ var noBusiness = document.querySelectorAll('div');
 noBusiness.forEach(function(element) {
     console.log(element.innerText);
 });
+
+var allBizniss = document.querySelector('p');
+alert(allBizniss.innerText);
