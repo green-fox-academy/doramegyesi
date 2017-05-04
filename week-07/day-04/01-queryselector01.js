@@ -20,3 +20,6 @@ console.log(king.innerText);
 
 var conceited  = document.querySelectorAll('.asteroid')[1];
 alert(conceited.innerText);
+
+var businessLamp = document.querySelectorAll('.big');
+console.log(businessLamp[0].innerText, businessLamp[1].innerText);
