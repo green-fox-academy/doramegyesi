@@ -1,4 +1,4 @@
-1. store the element that says 'The King' in the 'king' variable.
+/*1. store the element that says 'The King' in the 'king' variable.
 console.log it.
 2. store the element that contains the text 'The Conceited Man'
 in the 'conceited' variable.
@@ -13,4 +13,7 @@ alert them one by one.
 in the 'noBusiness' variable.
 console.log each of them.
 6. store 'The Businessman' in the 'allBizniss' variable.
-show the result in an 'alert' window.
+show the result in an 'alert' window.*/
+
+var king = document.querySelector('#b325');
+console.log(king.textContent);
