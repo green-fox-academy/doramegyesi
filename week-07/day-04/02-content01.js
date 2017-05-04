@@ -5,4 +5,7 @@
   5. Replace the last paragraph's content with the first paragraph's content.*/
 
 var heading = document.querySelector('title');
-alert(heading.innerText);
+alert(heading.textContent);
+
+var firstPar = document.querySelector('p');
+console.log(firstPar.textContent);
