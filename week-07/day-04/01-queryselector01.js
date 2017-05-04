@@ -25,3 +25,13 @@ var businessLamp = document.querySelectorAll('.big');
 businessLamp.forEach(function(element) {
     console.log(element.innerText);
 });
+
+var conceitedKing = document.querySelectorAll('section div');
+conceitedKing.forEach(function(element) {
+    alert(element.innerText);
+});
+
+var noBusiness = document.querySelectorAll('div');
+noBusiness.forEach(function(element) {
+    console.log(element.innerText);
+});
