@@ -4,7 +4,7 @@
   4. Replace the heading's content with 'New content'.
   5. Replace the last paragraph's content with the first paragraph's content.*/
 
-var heading = document.querySelector('title');
+var heading = document.querySelector('h1');
 alert(heading.textContent);
 
 var firstPar = document.querySelector('p');
@@ -12,3 +12,6 @@ console.log(firstPar.textContent);
 
 var secondPar = document.querySelector('.other');
 alert(secondPar.textContent);
+
+var newHeading = document.querySelector('h1');
+newHeading.innerText = 'New content';
