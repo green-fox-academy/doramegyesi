@@ -9,3 +9,6 @@ alert(heading.textContent);
 
 var firstPar = document.querySelector('p');
 console.log(firstPar.textContent);
+
+var secondPar = document.querySelector('.other');
+alert(secondPar.textContent);
