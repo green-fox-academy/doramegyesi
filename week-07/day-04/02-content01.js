@@ -14,4 +14,7 @@ var secondPar = document.querySelector('.other');
 alert(secondPar.textContent);
 
 var newHeading = document.querySelector('h1');
-newHeading.innerText = 'New content';
+newHeading.textContent = 'New content';
+
+var thirdPar = document.querySelector('.result');
+thirdPar.textContent = firstPar.textContent;
