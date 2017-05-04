@@ -16,4 +16,7 @@ console.log each of them.
 show the result in an 'alert' window.*/
 
 var king = document.querySelector('#b325');
-console.log(king.textContent);
+console.log(king.innerText);
+
+var conceited  = document.querySelectorAll('.asteroid')[1];
+alert(conceited.innerText);
