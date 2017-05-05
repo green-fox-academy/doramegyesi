@@ -6,3 +6,8 @@
 
 var imageUrl = document.querySelector('img');
 console.log(imageUrl.getAttribute('src'));
+
+imageUrl.setAttribute('src', 'https://scontent.fomr1-1.fna.fbcdn.net/v/t1.0-9/15541895_10154168034141334_5810053630532113183_n.jpg?oh=2329b0f27e54f4980a184effc5ee8597&oe=59887543');
+
+imageUrl.style.height = 305 + 'px';
+imageUrl.style.width = 400 + 'px';
