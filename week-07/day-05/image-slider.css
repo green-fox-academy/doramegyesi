@@ -20,7 +20,7 @@
 
 .infobox {
     width: 100%;
-    height: 30%;
+    height: 33%;
     background: rgba(0, 0, 0, 0.4);
     margin-top: 0px;
 }
@@ -34,6 +34,7 @@
 
 .description {
     padding-left: 35px;
+    padding-right: 35px;
     padding-top: 5px;
     margin-top: 0px;
     font-size: 25px;
@@ -51,6 +52,7 @@
     background: rgba(0, 0, 0, 0.4);
     font-weight: bold;
     font-size: 20px;
+    cursor: pointer;
 }
 
 #previous {
@@ -59,3 +61,13 @@
 
 #next {
     right: 0px;
+}
+
+.thumbnails {
+  width: 720px;
+  height: 80px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4)
+}
