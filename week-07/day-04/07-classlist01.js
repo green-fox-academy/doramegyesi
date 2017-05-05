@@ -15,3 +15,5 @@ if (classes[3].classList.contains('dolphin')) {
 if (classes[0].classList.contains('apple')) {
     classes[2].innerText = 'dog';
 }
+
+classes[0].style.color = 'Red';
