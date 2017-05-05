@@ -30,22 +30,36 @@ var mainPicture = document.querySelector('#main-image');
 var previous = document.querySelector('#previous');
 var next = document.querySelector('#next');
 var index = 0;
+var infotitle = document.querySelector('.infotitle')
+var description = document.querySelector('.description')
 
-function changePictures() {
+function getNext() {
     if (index+1 < allPictures.length) {
         index++;
         mainPicture.setAttribute('src', allPictures[index].source)
-        //mainPicture.setAttribute('src', allPictures[index].title)
-    } else if (index+1 === allPictures.length) {
-        mainPicture.setAttribute('src', allPictures[0].source)
+        infotitle.innerText = allPictures[index].title;
+        description.innerText = allPictures[index].description;
+    } else {
+        index = 0;
+        mainPicture.setAttribute('src', allPictures[index].source)
+        infotitle.innerText = allPictures[index].title;
+        description.innerText = allPictures[index].description;
     }
 };
 
-/*function getPrevious() {
-    if (index+1 < allPictures.length) {
+function getPrevious() {
+    if (index-1 >= 0) {
         index--;
         mainPicture.setAttribute('src', allPictures[index].source)
-};*/
+        infotitle.innerText = allPictures[index].title;
+        description.innerText = allPictures[index].description;
+    } else {
+        index = allPictures.length-1;
+        mainPicture.setAttribute('src', allPictures[index].source)
+        infotitle.innerText = allPictures[index].title;
+        description.innerText = allPictures[index].description;
+    }
+};
 
-previous.addEventListener('click', changePictures);
-next.addEventListener('click', changePictures);
+previous.addEventListener('click', getPrevious);
+next.addEventListener('click', getNext);

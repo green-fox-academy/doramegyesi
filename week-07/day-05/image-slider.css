@@ -20,15 +20,15 @@
 .infobox {
     width: 100%;
     height: 30%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.4);
     margin-top: 0px;
 }
 
 .infotitle {
     padding-left: 15px;
-    padding-top: 15px;
+    padding-top: 5px;
     margin-bottom: 0px;
-    font-size: 45px
+    font-size: 40px
 }
 
 .description {
@@ -42,7 +42,10 @@
     width: 30px;
     height: 20px;
     padding: 5px;
+    margin: 5px;
+    margin-left: 0px;
     border: 2px solid black;
+    display: inline-block;
 }
 
 #previous {
