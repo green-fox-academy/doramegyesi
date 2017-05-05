@@ -1,8 +1,9 @@
-var allPictures = [{
-    source: 'images/1.jpg',
-    title: 'being awesome',
-    description: 'Never half-ass two things. Whole-ass one thing.'
-},
+var allPictures = [
+    {
+        source: 'images/1.jpg',
+        title: 'being awesome',
+        description: 'Never half-ass two things. Whole-ass one thing.'
+    },
     {source: 'images/2.jpg',
     title: 'on women',
     description: 'I am a simple man. I like pretty, dark-haired women and breakfast food.'
@@ -22,4 +23,27 @@ var allPictures = [{
     {source: 'images/6.jpg',
     title: 'on caring',
     description: 'I am not interested in caring about people.'
-}]
+}];
+
+var mainPicture = document.querySelector('#main-image');
+var previous = document.querySelector('#previous');
+var next = document.querySelector('#next');
+var index = 0;
+
+function changePictures() {
+    if (index+1 < allPictures.length) {
+        index++;
+        mainPicture.setAttribute('src', allPictures[index].source)
+    } else if (index+1 === allPictures.length) {
+        mainPicture.setAttribute('src', allPictures[0].source)
+    }
+};
+
+/*function getPrevious() {
+    if (index+1 < allPictures.length) {
+        index--;
+        mainPicture.setAttribute('src', allPictures[index].source)
+};*/
+
+previous.addEventListener('click', changePictures);
+next.addEventListener('click', changePictures);
