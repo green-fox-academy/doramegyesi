@@ -4,3 +4,6 @@
     3. If the first p has an 'apple' class, replace cat's content with 'dog'
     4. Make apple red
     5. Make balloon less balloon-like */
+
+var classes = document.querySelectorAll('p');
+alert('YEAH CAT!', classes[2].classList.contains('cat'));
