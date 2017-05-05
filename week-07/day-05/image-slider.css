@@ -1,0 +1,13 @@
+.site {
+    width: auto;
+    background-color: LightSlateGrey;
+}
+
+.title {
+    font-family: 'Candara', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
