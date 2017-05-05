@@ -14,3 +14,6 @@ imageUrl.style.width = 400 + 'px';
 
 var bestWebsite = document.querySelector('a');
 bestWebsite.setAttribute('href', 'https://www.greenfoxacademy.com/');
+
+var button = document.querySelector(".this-one");
+button.disabled = true;
