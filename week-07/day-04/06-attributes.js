@@ -11,3 +11,6 @@ imageUrl.setAttribute('src', 'https://scontent.fomr1-1.fna.fbcdn.net/v/t1.0-9/15
 
 imageUrl.style.height = 305 + 'px';
 imageUrl.style.width = 400 + 'px';
+
+var bestWebsite = document.querySelector('a');
+bestWebsite.setAttribute('href', 'https://www.greenfoxacademy.com/');
