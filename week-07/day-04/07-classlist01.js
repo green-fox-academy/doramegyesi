@@ -7,3 +7,11 @@
 
 var classes = document.querySelectorAll('p');
 alert('YEAH CAT!', classes[2].classList.contains('cat'));
+
+if (classes[3].classList.contains('dolphin')) {
+    classes[0].innerText = 'pear';
+}
+
+if (classes[0].classList.contains('apple')) {
+    classes[2].innerText = 'dog';
+}
