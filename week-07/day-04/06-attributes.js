@@ -17,3 +17,4 @@ bestWebsite.setAttribute('href', 'https://www.greenfoxacademy.com/');
 
 var button = document.querySelector(".this-one");
 button.disabled = true;
+button.innerText = "Don't click me!";
