@@ -15,6 +15,7 @@
     width: 750px;
     height: 422px;
     margin: auto;
+    border: 5px solid lightsteelblue;
 }
 
 .infobox {
@@ -39,13 +40,17 @@
 }
 
 .button {
-    width: 30px;
-    height: 20px;
+    width: 70px;
+    height: 30px;
     padding: 5px;
     margin: 5px;
     margin-left: 0px;
     border: 2px solid black;
     display: inline-block;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    font-weight: bold;
+    font-size: 20px;
 }
 
 #previous {
