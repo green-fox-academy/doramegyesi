@@ -36,29 +36,23 @@ var description = document.querySelector('.description')
 function getNext() {
     if (index+1 < allPictures.length) {
         index++;
-        mainPicture.setAttribute('src', allPictures[index].source)
-        infotitle.innerText = allPictures[index].title;
-        description.innerText = allPictures[index].description;
     } else {
         index = 0;
-        mainPicture.setAttribute('src', allPictures[index].source)
-        infotitle.innerText = allPictures[index].title;
-        description.innerText = allPictures[index].description;
     }
+    mainPicture.setAttribute('src', allPictures[index].source)
+    infotitle.innerText = allPictures[index].title;
+    description.innerText = allPictures[index].description;
 };
 
 function getPrevious() {
     if (index-1 >= 0) {
         index--;
-        mainPicture.setAttribute('src', allPictures[index].source)
-        infotitle.innerText = allPictures[index].title;
-        description.innerText = allPictures[index].description;
     } else {
         index = allPictures.length-1;
-        mainPicture.setAttribute('src', allPictures[index].source)
-        infotitle.innerText = allPictures[index].title;
-        description.innerText = allPictures[index].description;
     }
+    mainPicture.setAttribute('src', allPictures[index].source)
+    infotitle.innerText = allPictures[index].title;
+    description.innerText = allPictures[index].description;
 };
 
 previous.addEventListener('click', getPrevious);
