@@ -1,7 +1,7 @@
 var allPictures = [
     {
         source: 'images/1.jpg',
-        title: 'being awesome',
+        title: 'words of wisdom',
         description: 'Never half-ass two things. Whole-ass one thing.'
     },
     {source: 'images/2.jpg',
@@ -34,6 +34,7 @@ function changePictures() {
     if (index+1 < allPictures.length) {
         index++;
         mainPicture.setAttribute('src', allPictures[index].source)
+        //mainPicture.setAttribute('src', allPictures[index].title)
     } else if (index+1 === allPictures.length) {
         mainPicture.setAttribute('src', allPictures[0].source)
     }
