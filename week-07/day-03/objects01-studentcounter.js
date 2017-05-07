@@ -24,3 +24,15 @@ function candyCounter(inputList) {
 }
 
 console.log(candyCounter(students))
+
+function ageOfPoorKids(inputList) {
+    var age = 0
+    inputList.forEach(function(value) {
+        if (value.candies < 5) {
+            age += value.age;
+        }
+    })
+    return age;
+}
+
+console.log(ageOfPoorKids(students))
