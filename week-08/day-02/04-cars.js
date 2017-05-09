@@ -11,7 +11,7 @@ var volvo = {
     this.kms += km;
     this.fuel -= km * this.consumption;
     return this.fuel;
-}
+    }
 };
 
 console.log(volvo.ride(42));
@@ -32,9 +32,34 @@ var ferrari = {
 };
 
 function refuel(liters) {
-  this.fuel += liters
-  return this.fuel
+  this.fuel += liters;
+  return this.fuel;
 };
 
 var refuelFerrari = refuel.bind(ferrari);
 console.log(refuelFerrari(52));
+
+
+// 3rd
+// Create a tesla object that has 3 properties
+//  - type: string
+//  - battery: number
+//  - kms: number
+//  - consunption: number
+// And a method called ride, that takes a parameter celled km,
+// and increments kms with it, then drains the battery based on the consumpltion
+
+var tesla = {
+    type: 'tesla',
+    battery: 50,
+    kms: 0,
+    consumption: 0.05,
+    ride: function (km) {
+        this.kms += km;
+        this.battery -= km * this.consumption;
+    }
+};
+
+tesla.ride(36);
+console.log(tesla.kms);
+console.log(tesla.battery);
