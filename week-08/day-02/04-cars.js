@@ -27,7 +27,6 @@ var ferrari = {
   ride: function (km) {
     this.kms += km;
     this.fuel -= km * this.consumption;
-    return this.fuel;
   }
 };
 
@@ -38,7 +37,6 @@ function refuel(liters) {
 
 var refuelFerrari = refuel.bind(ferrari);
 console.log(refuelFerrari(52));
-
 
 // 3rd
 // Create a tesla object that has 3 properties
