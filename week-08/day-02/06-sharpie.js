@@ -5,12 +5,21 @@
 //We can use() the sharpie objects
 //which decreases inkAmount by the width
 
-function sharpie(color, width, inkAmount) {
-    this.color = color,
-    this.width = width,
-    this.inkAmount = inkAmount
-    }
+function sharpie(color, width) {
+    this.color = color;
+    this.width = width;
+    this.inkAmount = 100;
+    this.usingSharpie = use;
+};
 
-var sharpieOne = new sharpie("black", 5.8, 2.3);
+var sharpieOne = new sharpie("black", 5.8);
 
 console.log(sharpieOne.color);
+console.log(sharpieOne.inkAmount);
+
+function use() {
+    this.inkAmount -= this.width;
+    return this.inkAmount;
+};
+
+console.log(sharpieOne.usingSharpie());
