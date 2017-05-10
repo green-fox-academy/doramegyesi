@@ -16,9 +16,13 @@ var car = {
     petrolLevel: 10,
     petrolCapacity: 50,
     refill: function (amount) {
-        this.petrolLevel += amount;
         var emptySpace = this.petrolCapacity - this.petrolLevel;
-        return emptySpace;
+        if (emptySpace >= amount) {
+            this.petrolLevel += amount;
+        } else {
+            this.petrolLevel += emptySpace;
+        }
+        return this.petrolLevel;
     }
 };
 
@@ -27,15 +31,12 @@ console.log(car.refill(20));
 var station = {
     petrolStorage: 3000,
     provide: function (car) {
-        var consumed = this.petrolStorage - car.refill(this.petrolStorage);
-        return this.petrolStorage - consumed;
+        this.petrolStorage -= car.refill(this.petrolStorage);
     }
 };
 
 console.log(car.petrolLevel);
 console.log(station.petrolStorage);
-
-//station.provide(car);
-
-//console.log(car.petrolLevel);
-//console.log(station.petrolStorage);
+station.provide(car);
+console.log(car.petrolLevel);
+console.log(station.petrolStorage);
