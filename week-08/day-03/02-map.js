@@ -18,6 +18,7 @@ var allTheEs = fruits.map(function(element) {
             n += 1;
         }
     })
+    return n;
 });
 
 console.log(allTheEs);
