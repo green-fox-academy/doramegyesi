@@ -9,16 +9,18 @@ var fruits = [
   'banana'
 ];
 
-var lookForE = fruits.map(function(x) {
-    var es = []
-    return x.split('').join('') === x;
-    if (x === 'e') {
-        es.push(x);
-    }
-    return es;
-})
 
-console.log(lookForE);
+var allTheEs = fruits.map(function(element) {
+    var allTheLetters = element.split('');
+    var n = 0;
+    allTheLetters.forEach(function(e) {
+        if (e === 'e') {
+            n += 1;
+        }
+    })
+});
+
+console.log(allTheEs);
 
 
 
