@@ -9,7 +9,6 @@ var fruits = [
   'banana'
 ];
 
-
 var allTheEs = fruits.map(function(element) {
     var allTheLetters = element.split('');
     var n = 0;
