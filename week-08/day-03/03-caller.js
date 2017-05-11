@@ -9,13 +9,10 @@ function printNumber(num) {
 };
 
 function selectLastEvenNumber(array, callback) {
-    var evenNumbers = [];
-    array.filter(function (e) {
-        if (e % 2 === 0) {
-            evenNumbers.push(e);
-        }
-        callback(evenNumbers[evenNumbers.length - 1])
+    var evenNumbers = array.filter(function (e) {
+        return e % 2 === 0;
     })
+    callback(evenNumbers[evenNumbers.length - 1])
 };
 
 selectLastEvenNumber([2, 5, 7, 8, 9, 11], printNumber); // should print 8
