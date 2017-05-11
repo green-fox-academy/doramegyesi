@@ -17,7 +17,7 @@ function animal(hunger, thirst) {
     this.thirst = 50;
     this.eating = eat;
     this.drinking = drink;
-    this.playing = play
+    this.playing = play;
 };
 
 function eat() {
@@ -37,3 +37,27 @@ var sloth = new animal();
 
 sloth.eating();
 console.log(sloth.hunger);
+
+function farm() {
+    this.listOfAnimals = [];
+    this.slots = 21;
+    this.breeding = breed;
+//    this.slaughtering = slaughter;
+};
+
+function breed() {
+        if (this.slots > 0) {
+            var newAnimal = new animal;
+            this.listOfAnimals.push(animal);
+            this.slots--;
+        }
+};
+
+//function slaugther() {
+
+//};
+
+var southforkRanch = new farm();
+
+southforkRanch.breeding();
+console.log(southforkRanch.slots);
