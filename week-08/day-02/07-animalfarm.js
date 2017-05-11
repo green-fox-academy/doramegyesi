@@ -42,22 +42,30 @@ function farm() {
     this.listOfAnimals = [];
     this.slots = 21;
     this.breeding = breed;
-//    this.slaughtering = slaughter;
+    this.slaughtering = slaughter;
 };
 
 function breed() {
-        if (this.slots > 0) {
-            var newAnimal = new animal;
-            this.listOfAnimals.push(animal);
-            this.slots--;
-        }
+    if (this.slots > 0) {
+        var newAnimal = new animal;
+        this.listOfAnimals.push(animal);
+        this.slots--;
+    }
 };
 
-//function slaugther() {
-
-//};
+function slaughter() {
+    this.listOfAnimals.sort(function (a, b) {
+        a.hunger - b.hunger;
+    });
+    this.listOfAnimals.shift();
+};
 
 var southforkRanch = new farm();
 
 southforkRanch.breeding();
+southforkRanch.breeding();
+southforkRanch.breeding();
+console.log(southforkRanch.listOfAnimals);
 console.log(southforkRanch.slots);
+southforkRanch.slaughtering();
+console.log(southforkRanch.listOfAnimals);
