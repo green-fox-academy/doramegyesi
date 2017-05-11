@@ -48,7 +48,7 @@ function farm() {
 function breed() {
     if (this.slots > 0) {
         var newAnimal = new animal;
-        this.listOfAnimals.push(animal);
+        this.listOfAnimals.push(newAnimal);
         this.slots--;
     }
 };
