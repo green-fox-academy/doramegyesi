@@ -6,15 +6,14 @@
 // melon -> after 3 seconds
 // grapes -> after 5 seconds
 
-let fruits = ['apple', 'pear', 'melon', 'grapes'];
-let time = [0, 1000, 3000, 5000];
+console.log('apple');
 
-console.log('apple')
+function printTheFruits(fruit, time) {
+    setTimeout(function() {
+        console.log(fruit);
+    }, time)
+};
 
-setTimeout(function(fruit, time) {
-    console.log('pear');
-}, time);
-
-setTimeout('pear', 1000);
-setTimeout('melon', 3000);
-setTimeout('grapes', 5000);
+printTheFruits('pear', 1000);
+printTheFruits('melon', 3000);
+printTheFruits('grapes', 5000);
