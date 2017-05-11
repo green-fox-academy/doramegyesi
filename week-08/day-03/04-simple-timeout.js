@@ -4,4 +4,4 @@
 
 setTimeout(function() {
     console.log('apple');
-}, 3000;)
+}, 3000);
