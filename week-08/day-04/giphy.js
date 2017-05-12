@@ -9,4 +9,8 @@ let req = new XMLHttpRequest();
 req.open('GET', 'http://api.giphy.com/v1/gifs/search?q=parks+and+recreation&api_key=dc6zaTOxFJmzC', true);
 req.send();
 
-console.log(req.onreadystatechange);
+req.onreadystatechange = function() {
+    if (req.readyState === 4 && req.status === 200) {
+        console.log(req.response);
+    }
+};
