@@ -11,6 +11,7 @@ req.send();
 
 req.onreadystatechange = function() {
     if (req.readyState === 4 && req.status === 200) {
-        console.log(req.response);
+        var listOfGifs = JSON.parse(req.response);
+        console.log(listOfGifs)
     }
 };
