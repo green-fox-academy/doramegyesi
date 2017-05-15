@@ -1,12 +1,25 @@
-html {
-    background: LightSlateGrey;
-}
-
 body {
-    flex-direction: row;
+    background: LightSlateGrey;
 }
 
 h1 {
     margin: auto;
     text-align: center;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+li {
+    list-style: none;
+    background-size: cover;
+    background: no-repeat;
+    background-position: center;
+    border: 2px solid black;
+    margin: 10px;
+    height: 130px;
+    flex: 1 1 20%;
 }
