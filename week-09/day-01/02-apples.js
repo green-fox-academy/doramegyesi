@@ -16,7 +16,7 @@ Fix the returned value to make the test succeeding again*/
 function fruit(v) {
     this.v = v;
     this.getApple = function() {
-    return v;
+        return v;
     }
 };
 
