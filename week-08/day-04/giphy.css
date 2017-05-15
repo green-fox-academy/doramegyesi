@@ -1,0 +1,12 @@
+html {
+    background: LightSlateGrey;
+}
+
+body {
+    flex-direction: row;
+}
+
+h1 {
+    margin: auto;
+    text-align: center;
+}
