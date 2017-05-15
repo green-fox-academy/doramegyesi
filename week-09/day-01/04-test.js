@@ -10,3 +10,8 @@ test('compare words', function(t) {
   t.equal(compare('sloth', 'cockroach'), false);
   t.end();
 });
+
+test('compare words', function(t) {
+  t.throws(function () {compare(2, 'cockroach')}, 'inputs must be strings');
+  t.end();
+});

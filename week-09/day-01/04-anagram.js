@@ -2,12 +2,20 @@
 Create a test for that.*/
 
 function compare (a, b) {
-    var firstWord = a.split("").sort().join("");
-    var secondWord = b.split("").sort().join("");
-    return firstWord === secondWord;
+    if (typeof a !== 'string' || typeof b !== 'string') {
+        throw new Error('inputs must be strings')
+    } else {
+        var firstWord = a.split("").sort().join("");
+        var secondWord = b.split("").sort().join("");
+        return firstWord === secondWord;
+    }
 };
 
-console.log(compare('dog', 'god'));
-console.log(compare('dog', 'cat'));
+try {
+    compare(3, 'cat');
+} catch (err) {
+    console.log('catching error: ');
+    console.log(err.message)
+};
 
 module.exports = compare;
