@@ -12,7 +12,18 @@ req.send();
 req.onreadystatechange = function() {
     if (req.readyState === 4 && req.status === 200) {
         var listOfGifs = JSON.parse(req.response);
-        var gif16 = listOfGifs.data.splice(16);
-        console.log(listOfGifs.data)
+    }
+    createThumbnails(listOfGifs.data);
+};
+
+let body = document.querySelector('body')
+let createThumbnails = function(gifs) {
+    for (let i = 0; i < 16; i++) {
+        let oneGif = document.createElement('img');
+        oneGif.setAttribute('src', gifs[i].images.downsized_still.url);
+        oneGif.addEventListener('click', function() {
+            oneGif.setAttribute('src', gifs[i].images.original.url);
+        });
+    body.appendChild(oneGif);
     }
 };
