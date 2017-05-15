@@ -17,15 +17,24 @@ Fix your code if needed*/
 
 function summarize() {
     this.sum = function(arr) {
-        var total = 0;
-        arr.forEach(function(element) {
-            total += element;
-        })
+        if (Array.isArray(arr) === false) {
+            throw new Error('input must be an array')
+        } else {
+            var total = 0;
+            arr.forEach(function(element) {
+                total += element;
+        })};
         return total;
     }
 };
 
-let sumThis = new summarize();
-console.log(sumThis.sum([1,2,3]));
-
 module.exports = summarize;
+
+try {
+    var dog = new summarize();
+    var cat = dog.sum('sloth');
+    console.log('macska ', cat);
+} catch (err) {
+    console.log('catching error: ');
+    console.log(err.message)
+};

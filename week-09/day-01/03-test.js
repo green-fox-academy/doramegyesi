@@ -21,3 +21,17 @@ test('sum one element', function(t) {
   t.equal(actual, expected);
   t.end();
 });
+
+test('sum a string', function(t) {
+  var actual = new summarize()
+  var expected = 'input must be an array';
+  t.throws(function () {actual.sum('sloth')}, expected);
+  t.end();
+});
+
+test('sum null', function(t) {
+  var actual = new summarize();
+  var expected = 'input must be an array';
+  t.throws(function () {actual.sum(null)}, expected);
+  t.end();
+});
