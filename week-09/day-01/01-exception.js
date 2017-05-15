@@ -20,10 +20,8 @@ let printStr = function(str) {
 };
 
 try {
-    addString('string', 'string', printStr)
+    addString(1234, 56789, printStr);
 } catch (err) {
     console.log('catching error: ');
     console.log(err.message)
 };
-
-addString(1234, 56789, printStr);
