@@ -9,3 +9,5 @@ function compare (a, b) {
 
 console.log(compare('dog', 'god'));
 console.log(compare('dog', 'cat'));
+
+module.exports = compare;
