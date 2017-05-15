@@ -7,17 +7,7 @@ h1 {
     text-align: center;
 }
 
-ul {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-li {
-    list-style: none;
-    background-size: cover;
-    background: no-repeat;
-    background-position: center;
+img {
     border: 2px solid black;
     margin: 10px;
     height: 130px;
