@@ -14,6 +14,7 @@ with a null
 with a string
 Run them
 Fix your code if needed*/
+'use strict';
 
 function summarize() {
     this.sum = function(arr) {
