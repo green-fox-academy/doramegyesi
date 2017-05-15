@@ -15,7 +15,6 @@ with a string
 Run them
 Fix your code if needed*/
 
-
 function summarize() {
     this.sum = function(arr) {
         var total = 0;
@@ -27,5 +26,6 @@ function summarize() {
 };
 
 let sumThis = new summarize();
-
 console.log(sumThis.sum([1,2,3]));
+
+module.exports = summarize;
