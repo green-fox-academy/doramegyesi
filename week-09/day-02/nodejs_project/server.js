@@ -24,4 +24,21 @@ app.get('/doubling', function(req, res) {
     }
 });
 
+app.get('/greeter', function(req, res) {
+    if (req.query.name === undefined) {
+        res.send( {
+            error: 'Please provide a name!'
+        });
+    } else if (req.query.title === undefined) {
+        res.send( {
+            error: 'Please provide a title!'
+        });
+    }
+     else {
+        res.send( {
+            welcome_message: 'Oh, hi there ' + req.query.name + ', my dear ' + req.query.title + '!'
+        })
+    }
+});
+
 app.listen(8080);
