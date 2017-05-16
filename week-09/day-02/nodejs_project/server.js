@@ -41,4 +41,10 @@ app.get('/greeter', function(req, res) {
     }
 });
 
+app.get('/appenda/:a', function(req, res) {
+    res.send( {
+        appended: req.params.a + 'a'
+    });
+});
+
 app.listen(8080);
