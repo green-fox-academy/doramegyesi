@@ -65,11 +65,11 @@ app.get('/fulldata', function get (req, res) {
             allData += '<th>' + 'publisher' + '</th>';
             allData += '<th>' + 'price' + '</th>' + '</tr>';
             rows.forEach(row => {
-                allData += '<td>' + row.book_name + '</td>';
+                allData += '<tr>' + '<td>' + row.book_name + '</td>';
                 allData += '<td>' + row.aut_name + '</td>';
                 allData += '<td>' + row.cate_descrip + '</td>';
                 allData += '<td>' + row.pub_name + '</td>';
-                allData += '<td>' + row.book_price + '</td>';
+                allData += '<td>' + row.book_price + '</td>' + '</tr>';
             });
             allData += '</table>';
         } res.send(allData);
