@@ -59,13 +59,11 @@ app.get('/fulldata', function get (req, res) {
         if (err) {
             console.log('PROBLEM', err);
         } else {
-            rows.forEach(row => {
-                allData += '<tr>' + '<th>' + 'title' + '</th>';
-                allData += '<th>' + 'author' + '</th>';
-                allData += '<th>' + 'category' + '</th>';
-                allData += '<th>' + 'publisher' + '</th>';
-                allData += '<th>' + 'price' + '</th>' + '</tr>';
-            });
+            allData += '<tr>' + '<th>' + 'title' + '</th>';
+            allData += '<th>' + 'author' + '</th>';
+            allData += '<th>' + 'category' + '</th>';
+            allData += '<th>' + 'publisher' + '</th>';
+            allData += '<th>' + 'price' + '</th>' + '</tr>';
             allData += '</table>';
         } res.send(allData);
     });
