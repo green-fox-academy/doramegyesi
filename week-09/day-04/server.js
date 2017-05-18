@@ -64,7 +64,6 @@ app.get('/fulldata', function get (req, res) {
             allData += '<th>' + 'category' + '</th>';
             allData += '<th>' + 'publisher' + '</th>';
             allData += '<th>' + 'price' + '</th>' + '</tr>';
-            allData += '</table>';
             rows.forEach(row => {
                 allData += '<td>' + row.book_name + '</td>';
                 allData += '<td>' + row.aut_name + '</td>';
@@ -72,6 +71,7 @@ app.get('/fulldata', function get (req, res) {
                 allData += '<td>' + row.pub_name + '</td>';
                 allData += '<td>' + row.book_price + '</td>';
             });
+            allData += '</table>';
         } res.send(allData);
     });
 });
