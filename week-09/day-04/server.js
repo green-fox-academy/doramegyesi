@@ -16,7 +16,7 @@ conn.query('SELECT * FROM author;', function (err, rows) {
         console.log('Yeah it is not working like this', err);
     } else {
         console.log('Data received:\n')
-        rows.forEach(row=>{
+        rows.forEach(row => {
             console.log(row.country)
         });
     }
@@ -31,8 +31,21 @@ app.get('/', function get(req, res) {
             rows.forEach( function(row) {
                 result.push(row.aut_name);
             });
-        }
-        res.send(result);
+        } res.send(result);
+    });
+});
+
+app.get('/all', function get(req, res) {
+    var books = '<ul>'
+    conn.query('SELECT book_name FROM book_mast', function (err, rows) {
+        if (err) {
+            console.log('PROBLEM', err);
+        } else {
+            rows.forEach(row => {
+                books += '<li>' + row.book_name + '</li>';
+            });
+            books += '</ul>';
+        } res.send(books);
     });
 });
 
