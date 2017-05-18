@@ -36,7 +36,7 @@ app.get('/', function get(req, res) {
 });
 
 app.get('/all', function get(req, res) {
-    var books = '<ul>'
+    var books = '<ul>';
     conn.query('SELECT book_name FROM book_mast', function (err, rows) {
         if (err) {
             console.log('PROBLEM', err);
@@ -46,6 +46,28 @@ app.get('/all', function get(req, res) {
             });
             books += '</ul>';
         } res.send(books);
+    });
+});
+
+app.get('/fulldata', function get (req, res) {
+    var allData = '<table>';
+    var queryAllData = 'SELECT book_mast.book_name, author.aut_name, category.cate_descrip, publisher.pub_name, book_mast.book_price ' + 'FROM book_mast ' +
+    'JOIN author ON book_mast.aut_id = author.aut_id ' +
+    'JOIN category ON book_mast.cate_id = category.cate_id ' +
+    'JOIN publisher ON book_mast.pub_id = publisher.pub_id ;';
+    conn.query(queryAllData, function (err, rows) {
+        if (err) {
+            console.log('PROBLEM', err);
+        } else {
+            rows.forEach(row => {
+                allData += '<tr>' + '<th>' + 'title' + '</th>';
+                allData += '<th>' + 'author' + '</th>';
+                allData += '<th>' + 'category' + '</th>';
+                allData += '<th>' + 'publisher' + '</th>';
+                allData += '<th>' + 'price' + '</th>' + '</tr>';
+            });
+            allData += '</table>';
+        } res.send(allData);
     });
 });
 
