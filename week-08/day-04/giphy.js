@@ -1,12 +1,12 @@
-'use strict';
-
 /*Display gifs of a cute/funny topic using: https://github.com/0Giphy/GiphyAPI
 Search/Find the images in the API
 Display the list of the first 16 results's static thumbnail
 If the user clicks on the thumbnail, display the animated GIF*/
 
+'use strict';
+
 let req = new XMLHttpRequest();
-req.open('GET', 'http://api.giphy.com/v1/gifs/search?q=parks+and+recreation&api_key=dc6zaTOxFJmzC', true);
+req.open('GET', 'http://api.giphy.com/v1/gifs/search?q=ron+swanson&api_key=dc6zaTOxFJmzC', true);
 req.send();
 
 req.onreadystatechange = function() {
@@ -21,8 +21,11 @@ let createThumbnails = function(gifs) {
     for (let i = 0; i < 16; i++) {
         let oneGif = document.createElement('img');
         oneGif.setAttribute('src', gifs[i].images.downsized_still.url);
-        oneGif.addEventListener('click', function() {
+        oneGif.addEventListener('mouseover', function() {
             oneGif.setAttribute('src', gifs[i].images.original.url);
+        });
+        oneGif.addEventListener('mouseout', function() {
+            oneGif.setAttribute('src', gifs[i].images.downsized_still.url);
         });
     body.appendChild(oneGif);
     }
