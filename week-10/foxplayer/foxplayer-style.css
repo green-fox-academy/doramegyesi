@@ -12,4 +12,9 @@ body {
     height: 450px;
     margin: auto;
     border: 5px solid MidnightBlue;
+    background: AliceBlue;
+}
+
+.controlpanel {
+    display: flex;
 }
