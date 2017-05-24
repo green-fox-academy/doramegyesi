@@ -20,7 +20,7 @@ body {
 }
 
 .head {
-    background: LightSteelBlue;
+    background: SteelBlue;
     width: 350px;
     height: 150px;
 }
@@ -54,8 +54,8 @@ body {
 }
 
 .blackadd {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
 }
 
 .alltracks, .favs {
@@ -92,6 +92,21 @@ h2 {
     width: 400px;
     height: 280px;
     display: flex;
+    overflow: auto;
+}
+
+.tracks::-webkit-scrollbar {
+    width: 3px;
+}
+
+.tracks::-webkit-scrollbar-track {
+}
+
+.tracks::-webkit-scrollbar-track {
+}
+
+.tracks::-webkit-scrollbar-thumb {
+  background: Grey;
 }
 
 .controlpanel {
@@ -103,11 +118,9 @@ h2 {
     height: 50px;
     padding: 10px;
     align-items: center;
-    justify-content: space-between;
+    flex-direction: row;
 }
 
-.audio {
-    width: 400px;
-    height: 100px;
-    padding: 20px;
+audio::-webkit-media-controls-panel {
+    width: 500px;
 }
