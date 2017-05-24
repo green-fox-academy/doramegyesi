@@ -15,7 +15,7 @@ body {
     background: WhiteSmoke;
 }
 
-.maininfo {
+.leftside {
     flex-direction: column;
 }
 
@@ -31,32 +31,67 @@ body {
     height: 230px;
 }
 
+.pictures {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fox {
+    width: 80px;
+    height: 80px;
+}
+
+.cover {
+    width: 120px;
+    height: 120px;
+}
+
+.playlist-add {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blackadd {
+    width: 25px;
+    height: 25px;
+}
+
 .alltracks, .favs {
-    width: 350px;
+    width: 338px;
     height: 35px;
-    border: 2px solid MidnightBlue;
+    border: 1px solid MidnightBlue;
     padding: 5px;
 }
 
-.leftside {
+.rightside {
     flex-direction: column;
 }
 
 .current {
-    background: RoyalBlue;
+    background: SteelBlue;
     width: 400px;
     height: 100px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
+}
+
+h2 {
+    margin: 0;
+}
+
+.favourite, .addtolist {
+    width: 30px;
+    height: 30px;
 }
 
 .tracks {
-    background: Turquoise;
+    background: Gainsboro;
     width: 400px;
     height: 280px;
     display: flex;
-    overflow: auto;
 }
 
 .controlpanel {
@@ -68,16 +103,11 @@ body {
     height: 50px;
     padding: 10px;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 
 .audio {
     width: 400px;
     height: 100px;
     padding: 20px;
-}
-
-.favourite, .addtolist {
-    width: 30px;
-    height: 30px;
 }
