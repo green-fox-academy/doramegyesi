@@ -8,26 +8,41 @@
     </head>
     <body>
         <div class="wrapper">
-            <div class="maininfo">
+            <div class="leftside">
                 <div class="head">
-                    <img src="img/foxplayer.png">
-                    <h2>Playlist</h2>
+                    <div class="pictures">
+                        <img class="fox" src="img/foxplayer.png">
+                        <img class="cover" src="img/music-placeholder.png">
+                    </div>
+                    <div class="playlist-add">
+                        <h2>Playlist</h2>
+                        <img class="blackadd" src="img/blackadd.svg">
+                    </div>
                 </div>
                 <div class="playlist">
                     <div class="alltracks">All tracks</div>
                     <div class="favs">Favourites</div>
                 </div>
             </div>
-            <div class="leftside">
+            <div class="rightside">
                 <div class="current">
-                    <img src="img/add.svg" class="addtolist">
-                    <img src="img/star.svg" class="favourite">
+                    <div class="songinfo">
+                        <h2>Title of the song</h2>
+                        <p>Artist</p>
+                    </div>
+                    <div class= "actionbuttons">
+                        <img src="img/add.svg" class="addtolist">
+                        <img src="img/star.svg" class="favourite">
+                    </div>
                 </div>
                 <div class="tracks"></div>
             </div>
             <div class="controlpanel">
+                <img src="img/shuffle.svg">
+                <img src="img/rewind.svg">
+                <img src="img/forward.svg">
                 <audio controls>
-                    <source src="Purple_Drift.mp3" type="audio/mpeg">
+                    <source src="music/Purple_Drift.mp3" type="audio/mpeg">
                 </audio>
             </div>
         <div>
