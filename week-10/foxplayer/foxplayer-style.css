@@ -83,8 +83,9 @@ h2 {
 }
 
 .favourite, .addtolist {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
 }
 
 .tracks {
@@ -123,4 +124,10 @@ h2 {
 
 audio::-webkit-media-controls-panel {
     width: 500px;
+}
+
+.shuffle, .rewind, .forward {
+    width: 25px;
+    height: 25px;
+    padding: 10px;
 }
