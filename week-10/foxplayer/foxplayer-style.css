@@ -31,6 +31,20 @@ body {
     height: 230px;
 }
 
+.playlist::-webkit-scrollbar {
+    width: 3px;
+}
+
+.playlist::-webkit-scrollbar-track {
+}
+
+.playlist::-webkit-scrollbar-track {
+}
+
+.playlist::-webkit-scrollbar-thumb {
+  background: Grey;
+}
+
 .pictures {
     display: flex;
     align-items: center;
@@ -58,7 +72,7 @@ body {
     height: 30px;
 }
 
-.alltracks, .favs {
+.alltracks, .favs, .playlistItem {
     width: 338px;
     height: 35px;
     border: 1px solid MidnightBlue;

@@ -14,6 +14,7 @@ const getPlaylists = function() {
             console.log(playlists);
             playlists.forEach(function(item) {
                 var playlistItem = document.createElement('div');
+                playlistItem.setAttribute('class', 'playlistItem')
                 playlistItem.innerText = item.title;
                 playlist.appendChild(playlistItem);
             });
