@@ -8,26 +8,27 @@
     </head>
     <body>
         <div class="wrapper">
-            <div class="container">
-                <img src="img/foxplayer.png">
-                <div class="playlist">
+            <div class="maininfo">
+                <div class="head">
+                    <img src="img/foxplayer.png">
                     <h2>Playlist</h2>
-                    <p>All tracks</p>
-                    <p>Favourites</p>
-                    <p>Relaxing music for programming</p>
-                    <p>Party</p>
                 </div>
+                <div class="playlist">
+                    <div class="alltracks">All tracks</div>
+                    <div class="favs">Favourites</div>
+                </div>
+            </div>
+            <div class="leftside">
                 <div class="current">
-                   <img src="img/add.svg" class="addtolist">
+                    <img src="img/add.svg" class="addtolist">
                     <img src="img/star.svg" class="favourite">
                 </div>
-                <div class="tracks">
-                </div>
-                <div class="controlpanel">
-                    <audio controls>
-                        <source src="Purple_Drift.mp3" type="audio/mpeg">
-                    </audio>
-                </div>
+                <div class="tracks"></div>
+            </div>
+            <div class="controlpanel">
+                <audio controls>
+                    <source src="Purple_Drift.mp3" type="audio/mpeg">
+                </audio>
             </div>
         <div>
         <script src="music/foxplayer.js"></script>
