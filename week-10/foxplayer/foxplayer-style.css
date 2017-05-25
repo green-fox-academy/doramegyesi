@@ -120,6 +120,11 @@ p {
     height: 280px;
     display: flex;
     overflow: auto;
+    flex-direction: column;
+}
+
+.tracklistItem {
+    width: auto;
 }
 
 .tracks::-webkit-scrollbar {
