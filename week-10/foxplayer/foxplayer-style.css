@@ -84,7 +84,7 @@ h2 {
 }
 
 .alltracks, .favs, .playlistItem, .tracklistItem {
-    width: 338px;
+    width: auto;
     height: 35px;
     border: 1px solid MidnightBlue;
     padding: 5px;
@@ -119,7 +119,6 @@ p {
     background: LightGrey;
     width: 400px;
     height: 280px;
-    display: flex;
     overflow: scroll;
     flex-direction: column;
 }
