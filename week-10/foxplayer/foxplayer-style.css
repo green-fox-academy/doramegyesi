@@ -52,13 +52,19 @@ body {
 }
 
 .fox {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
+    padding-left: 5px;
 }
 
 .cover {
     width: 120px;
     height: 120px;
+}
+
+h2 {
+    padding-left: 5px;
+    margin: 0;
 }
 
 .playlist-add {
@@ -76,7 +82,7 @@ body {
     cursor: pointer;
 }
 
-.alltracks, .favs, .playlistItem {
+.alltracks, .favs, .playlistItem, .tracklistItem {
     width: 338px;
     height: 35px;
     border: 1px solid MidnightBlue;
@@ -96,18 +102,20 @@ body {
     justify-content: space-between;
 }
 
-h2 {
-    margin: 0;
+p {
+    padding-left: 5px;
 }
+
 
 .favourite, .addtolist {
     width: 25px;
     height: 25px;
     padding: 5px;
+    cursor: pointer;
 }
 
 .tracks {
-    background: Gainsboro;
+    background: LightGrey;
     width: 400px;
     height: 280px;
     display: flex;
@@ -148,4 +156,5 @@ audio::-webkit-media-controls-panel {
     width: 25px;
     height: 25px;
     padding: 10px;
+    cursor: pointer;
 }
