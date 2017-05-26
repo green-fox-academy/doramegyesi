@@ -53,10 +53,6 @@ app.get('/playlists-tracks', function(req, res) {
     });
 });
 
-app.get('/playlist-tracks:playlist_id', function(req, res) {
-    res.send(allTracks);
-});
-
 app.listen(3000, function() {
     console.log('server is running smoothly');
 });
