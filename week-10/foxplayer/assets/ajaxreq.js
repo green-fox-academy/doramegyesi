@@ -26,7 +26,7 @@ const getPlaylists = function() {
 const getTracklist = function() {
     const req = new XMLHttpRequest();
     const method = 'GET';
-    const url = 'http://localhost:3000/playlist-tracks:playlist_id';
+    const url = 'http://localhost:3000/playlists-tracks';
     req.open(method, url);
     req.send();
     req.onreadystatechange = function() {
