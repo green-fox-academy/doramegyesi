@@ -89,6 +89,7 @@ h2 {
     height: 35px;
     border: 1px solid MidnightBlue;
     padding: 5px;
+    cursor: pointer;
 }
 
 .rightside {

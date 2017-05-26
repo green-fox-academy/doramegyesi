@@ -6,7 +6,7 @@ const audio = document.querySelector('audio');
 
 
 function ajaxreq(url, method, callback) {
-	var req = new XMLHttpRequest();
+	const req = new XMLHttpRequest();
 	req.open(method, url);
 	req.onreadystatechange = function () {
         if (req.readyState === 4 && req.status === 200) {
@@ -52,36 +52,18 @@ const getTracklist = function() {
                 tracklistItem.setAttribute('class', 'tracklistItem')
                 tracklistItem.innerText = item.title;
                 tracks.appendChild(tracklistItem);
+                tracklistItem.addEventListener('click', function() {
+                    play(item.path);
+                })
             });
         }
     }
 };
 
-/*function play(path){
+function play(path){
     audio.setAttribute('src', path)
     audio.play();
-}*/
-
-
-/*const audio = document.querySelector('audio')
-
-function pausePlay(event) {
-    switch (event.keyCode) {
-        case 32:
-            if (play) {
-                audio.pause();
-                play = false;
-            } else {
-                audio.play();
-                play = true;
-            }
-            break;
-        }
-  return false;
 }
 
-window.addEventListener("keydown", onKeyDown, false);
-</script>
-*/
 getPlaylists();
 getTracklist();
