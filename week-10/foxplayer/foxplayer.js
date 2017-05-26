@@ -19,21 +19,21 @@ const connect = mysql.createConnection({
   database: "foxplayer"
 });
 
-connect.connect(function(err){
+connect.connect(function(err) {
   if(err){
     console.log("could not connect");
   }
   console.log("connected successfully");
 });
 
-app.get('/', function(req, res){
+app.get('/', function(req, res) {
     res.sendFile(__dirname + '/foxplayer.html');
 });
 
-app.get('/playlists', function(req, res){
+app.get('/playlists', function(req, res) {
 	connect.query('SELECT * FROM playlists', function(err, rows) {
 		if (err) {
-			console.log('could not reach the playlists', err.message)
+			console.log('could not reach the playlists', err.message);
 		} else {
 			response = rows;
 			console.log(response);
@@ -42,10 +42,21 @@ app.get('/playlists', function(req, res){
 	});
 });
 
-app.get('/playlist-tracks:playlist_id', function(req, res){
+app.get('/playlists-tracks', function(req, res) {
+    connect.query('SELECT * FROM tracks', function(err, rows) {
+        if (err) {
+            console.log('could not reach the playlists', err.message);
+        } else {
+            response = rows;
+        };
+        res.send(response);
+    });
+});
+
+app.get('/playlist-tracks:playlist_id', function(req, res) {
     res.send(allTracks);
 });
 
-app.listen(3000, function(){
+app.listen(3000, function() {
     console.log('server is running smoothly');
 });
