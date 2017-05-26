@@ -84,7 +84,7 @@ h2 {
     cursor: pointer;
 }
 
-.alltracks, .favs, .playlistItem, .tracklistItem {
+.playlistItem, .tracklistItem {
     width: auto;
     height: 35px;
     border: 1px solid MidnightBlue;
