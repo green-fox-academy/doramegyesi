@@ -1,7 +1,21 @@
 'use strict';
 
-const playlist = document.querySelector('.playlist')
-const tracks = document.querySelector('.tracks')
+const playlist = document.querySelector('.playlist');
+const tracks = document.querySelector('.tracks');
+const audio = document.querySelector('audio');
+
+
+function ajaxreq(url, method, callback) {
+	var req = new XMLHttpRequest();
+	req.open(method, url);
+	req.onreadystatechange = function () {
+        if (req.readyState === 4 && req.status === 200) {
+            var response = JSON.parse(req.response);
+            callback(response);
+		}
+	}
+	req.send();
+};
 
 const getPlaylists = function() {
     const req = new XMLHttpRequest();
@@ -42,6 +56,12 @@ const getTracklist = function() {
         }
     }
 };
+
+/*function play(path){
+    audio.setAttribute('src', path)
+    audio.play();
+}*/
+
 
 /*const audio = document.querySelector('audio')
 
