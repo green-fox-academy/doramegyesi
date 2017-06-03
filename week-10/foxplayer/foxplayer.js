@@ -20,7 +20,7 @@ const connect = mysql.createConnection({
 });
 
 connect.connect(function(err) {
-  if(err){
+  if(err) {
     console.log("could not connect");
   }
   console.log("connected successfully");
@@ -45,7 +45,18 @@ app.get('/playlists', function(req, res) {
 app.get('/playlists-tracks', function(req, res) {
     connect.query('SELECT * FROM tracks', function(err, rows) {
         if (err) {
-            console.log('could not reach the playlists', err.message);
+            console.log('could not reach the tracklist', err.message);
+        } else {
+            response = rows;
+        };
+        res.send(response);
+    });
+});
+
+app.get('/playlists-tracks/:playlistId', function(req, res) {
+    connect.query('SELECT * FROM tracks JOIN joint ON tracks.id = joint.track_id WHERE joint.playlist_id = "' + req.params.playlistId + '"', function(err, rows) {
+        if (err) {
+            console.log('could not find the playlist', err.message);
         } else {
             response = rows;
         };
