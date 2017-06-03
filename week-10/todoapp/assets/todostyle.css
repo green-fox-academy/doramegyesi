@@ -1,0 +1,7 @@
+body {
+    background: Snow;
+    font-family: 'Candara', sans-serif;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
