@@ -8,7 +8,7 @@ const audio = document.querySelector('audio');
 function ajaxreq(url, method, callback) {
 	const req = new XMLHttpRequest();
 	req.open(method, url);
-	req.onreadystatechange = function () {
+	req.onreadystatechange = function() {
         if (req.readyState === 4 && req.status === 200) {
             var response = JSON.parse(req.response);
             callback(response);
@@ -29,13 +29,22 @@ const getPlaylists = function() {
             console.log(playlists);
             playlists.forEach(function(item) {
                 var playlistItem = document.createElement('div');
-                playlistItem.setAttribute('class', 'playlistItem')
+                playlistItem.setAttribute('class', 'playlistItem');
                 playlistItem.innerText = item.title;
                 playlist.appendChild(playlistItem);
+				playlistItem.addEventListener('click', function() {
+					ajaxreq('http://localhost:3000/playlists-tracks/' + playlistItem.id, 'GET', getTracklist);
+					console.log(playlistItem);
+				});
             });
         }
     }
 };
+
+// playlistitem eventlistener -- ajax a playlist-tracksre + element.title (get)
+// utana szerver oldalon uj endpoint app.get() -- conn.query SELECT bla FROM bla
+// res.send!
+//ajaxnal a callback a gettracklist
 
 const getTracklist = function() {
     const req = new XMLHttpRequest();
@@ -49,12 +58,12 @@ const getTracklist = function() {
             console.log(tracklist);
             tracklist.forEach(function(item) {
                 var tracklistItem = document.createElement('div');
-                tracklistItem.setAttribute('class', 'tracklistItem')
+                tracklistItem.setAttribute('class', 'tracklistItem');
                 tracklistItem.innerText = item.title;
                 tracks.appendChild(tracklistItem);
                 tracklistItem.addEventListener('click', function() {
                     play(item.path);
-                })
+                });
             });
         }
     }
