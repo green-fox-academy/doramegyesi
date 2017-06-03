@@ -5,3 +5,18 @@ body {
     align-content: center;
     justify-content: center;
 }
+
+.wrapper {
+    display: flex;
+    width: 750px;
+    height: 450px;
+    margin: auto;
+    margin-top: 100px;
+    background: SteelBlue;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    cursor: pointer;
+}
