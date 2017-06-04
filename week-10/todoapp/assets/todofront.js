@@ -25,7 +25,9 @@ const getTodoList = function() {
                 todo.appendChild(icons)
                 var trash = document.createElement('div');
                 trash.setAttribute('class', 'trash');
+                trash.setAttribute('id', item.id);
                 icons.appendChild(trash);
+                console.log(item.id);
                 console.log(item.text);
                 console.log(item.completed);
                 var check = document.createElement('div');
@@ -34,6 +36,7 @@ const getTodoList = function() {
                 } else {
                     check.setAttribute('class', 'yes');
                 };
+                check.setAttribute('id', item.id);
                 icons.appendChild(check);
 			});
         }
