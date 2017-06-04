@@ -1,5 +1,5 @@
 body {
-    background: Snow;
+    background: Gainsboro;
     font-family: 'Candara', sans-serif;
     display: flex;
     align-content: center;
@@ -18,5 +18,34 @@ body {
 }
 
 button {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+input {
+    width: 300px;
+}
+
+.list {
+    display: block;
+    margin-top: 15px;
+}
+
+.todo {
+    background: Gainsboro;
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    margin: 5px;
+    padding: 2px;
+}
+
+.trash {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-image: url('../assets/trash.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
     cursor: pointer;
 }

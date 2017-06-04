@@ -15,8 +15,14 @@ const getTodoList = function() {
             todoList.forEach(function(item) {
                 var todo = document.createElement('div');
                 todo.setAttribute('class', 'todo');
-                todo.innerText = item.text;
                 list.appendChild(todo);
+                var todoText = document.createElement('div')
+                todoText.innerText = item.text;
+                todoText.setAttribute('class', 'todotext');
+                todo.appendChild(todoText);
+                var trash = document.createElement('div');
+                trash.setAttribute('class', 'trash');
+                todo.appendChild(trash);
 			});
         }
     }
