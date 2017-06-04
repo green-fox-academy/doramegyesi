@@ -40,12 +40,23 @@ input {
     padding: 2px;
 }
 
-.trash {
+.trash, .no, .yes {
     width: 30px;
     height: 30px;
     display: inline-block;
-    background-image: url('../assets/trash.svg');
     background-repeat: no-repeat;
     background-size: contain;
     cursor: pointer;
+}
+
+.trash {
+    background-image: url('../assets/trash.svg');
+}
+
+.no {
+    background-image: url('../assets/circle.svg');
+}
+
+.yes {
+    background-image: url('../assets/check.svg');
 }

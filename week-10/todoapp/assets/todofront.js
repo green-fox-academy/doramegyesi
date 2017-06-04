@@ -16,13 +16,25 @@ const getTodoList = function() {
                 var todo = document.createElement('div');
                 todo.setAttribute('class', 'todo');
                 list.appendChild(todo);
-                var todoText = document.createElement('div')
+                var todoText = document.createElement('div');
                 todoText.innerText = item.text;
                 todoText.setAttribute('class', 'todotext');
                 todo.appendChild(todoText);
+                var icons = document.createElement('div');
+                icons.setAttribute('class', 'icons');
+                todo.appendChild(icons)
                 var trash = document.createElement('div');
                 trash.setAttribute('class', 'trash');
-                todo.appendChild(trash);
+                icons.appendChild(trash);
+                console.log(item.text);
+                console.log(item.completed);
+                var check = document.createElement('div');
+                if (item.completed === '0') {
+                    check.setAttribute('class', 'no');
+                } else {
+                    check.setAttribute('class', 'yes');
+                };
+                icons.appendChild(check);
 			});
         }
     }
