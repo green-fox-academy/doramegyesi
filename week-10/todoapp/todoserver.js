@@ -43,7 +43,7 @@ app.get('/todos', function(req, res) {
 });
 
 app.delete('/todos/:id', function(req, res) {
-    connect.query('DELETE FROM todos WHERE id = "'+ req.params.id +'"', function(err, rows) {
+    connect.query('DELETE FROM todolist WHERE id = "'+ req.params.id +'"', function(err, rows) {
         connect.query('SELECT * FROM todolist', function(err, rows) {
     		if (err) {
     			console.log('could not find the table', err.message);
