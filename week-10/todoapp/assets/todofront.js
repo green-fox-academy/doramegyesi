@@ -2,6 +2,18 @@
 
 const list = document.querySelector('.list');
 
+function ajaxreq(url, method, callback) {
+	const req = new XMLHttpRequest();
+	req.open(method, url);
+	req.onreadystatechange = function() {
+        if (req.readyState === 4 && req.status === 200) {
+            var response = JSON.parse(req.response);
+            callback(response);
+		}
+	}
+	req.send();
+};
+
 const getTodoList = function() {
     const req = new XMLHttpRequest();
     const method = 'GET';
@@ -12,6 +24,7 @@ const getTodoList = function() {
         if (req.readyState === 4 && req.status === 200) {
             var todoList = JSON.parse(req.response);
             console.log(todoList);
+            list.innerText = '';
             todoList.forEach(function(item) {
                 var todo = document.createElement('div');
                 todo.setAttribute('class', 'todo');
@@ -27,6 +40,9 @@ const getTodoList = function() {
                 trash.setAttribute('class', 'trash');
                 trash.setAttribute('id', item.id);
                 icons.appendChild(trash);
+                trash.addEventListener('click', function() {
+                    ajaxreq('http://localhost:3000/todos/' + trash.id, 'DELETE', getTodoList)
+                });
                 console.log(item.id);
                 console.log(item.text);
                 console.log(item.completed);
