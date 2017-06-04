@@ -54,7 +54,7 @@ app.get('/playlists-tracks', function(req, res) {
 });
 
 app.get('/playlists-tracks/:playlistId', function(req, res) {
-    connect.query('SELECT * FROM tracks JOIN joint ON tracks.id = joint.track_id WHERE joint.playlist_id = "' + req.params.playlistId + '"', function(err, rows) {
+    connect.query('SELECT * FROM tracks INNER JOIN joint ON tracks.id = joint.track_id WHERE joint.playlist_id = "' + req.params.playlistId + '"', function(err, rows) {
         if (err) {
             console.log('could not find the playlist', err.message);
         } else {
