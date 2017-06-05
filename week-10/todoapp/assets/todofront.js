@@ -63,8 +63,6 @@ const getTodoList = function() {
 
 const postToServer = function(url, method, input, callback) {
     const req = new XMLHttpRequest();
-    const method = 'POST';
-    const url = 'http://localhost:3000/todos';
     req.open(method, url);
     req.setRequestHeader('Content-Type', 'application/json');
     req.setRequestHeader('Accept', 'application/json');
@@ -82,8 +80,8 @@ const postToServer = function(url, method, input, callback) {
 };
 
 button.addEventListener('click', function() {
-    input.value = '';
     postToServer('http://localhost:3000/todos', 'POST', input.value, getTodoList);
+    input.value = '';
 });
 
 getTodoList();

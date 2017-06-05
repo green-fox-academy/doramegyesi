@@ -44,30 +44,26 @@ app.get('/todos', function(req, res) {
 
 app.delete('/todos/:id', function(req, res) {
     connect.query('DELETE FROM todolist WHERE id = "'+ req.params.id +'"', function(err, rows) {
-        connect.query('SELECT * FROM todolist', function(err, rows) {
-    		if (err) {
-    			console.log('could not find the table', err.message);
-    		} else {
-    			response = rows;
-    			console.log(response);
-    		}
-            res.send(response);
-    	});
+    	if (err) {
+    		console.log('could not find the table', err.message);
+    	} else {
+    		response = rows;
+    		console.log(response);
+    	}
+        res.send(response);
     });
 });
 
 app.post('/todos/', function(req, res) {
-    connect.query('INSERT INTO todolist (text) VALUES("'+ req.body.text +'");', function(err, rows) {
-        connect.query('SELECT * FROM todolist', function(err, rows) {
-    		if (err) {
-    			console.log('could not find the table', err.message);
-    		} else {
-    			response = rows;
-    			console.log(response);
-    		}
-            res.send(response);
-    	});
-    });
+    connect.query('INSERT INTO todolist (text, completed) VALUES("'+ req.body.text +'", "'+ req.body.completed +'");', function(err, rows) {
+		if (err) {
+			console.log('could not find the table', err.message);
+		} else {
+			response = rows;
+			console.log(response);
+		}
+        res.send(response);
+	});
 });
 
 app.listen(3000, function() {
