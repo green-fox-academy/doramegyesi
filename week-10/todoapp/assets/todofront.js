@@ -14,9 +14,9 @@ function ajaxreq(url, method, callback) {
         if (req.readyState === 4 && req.status === 200) {
             var response = JSON.parse(req.response);
             callback(response);
-		}
-	}
-	req.send();
+        }
+    }
+    req.send();
 };
 
 const getTodoList = function() {
@@ -62,11 +62,11 @@ const getTodoList = function() {
                 check.addEventListener('click', function() {
                     putToServer('http://localhost:3000/todos/' + check.id, 'PUT', item.completed, getTodoList);
                 });
-				var getIncomplete = function() {
-					ajaxreq('http://localhost:3000/todos/incomplete', 'GET', getTodoList)
-				}
-				incomplete.addEventListener('click', getIncomplete);
-			});
+                var getIncomplete = function() {
+                	ajaxreq('http://localhost:3000/todos/incomplete', 'GET', getTodoList)
+                }
+                incomplete.addEventListener('click', getIncomplete);
+            });
         }
     }
 };
