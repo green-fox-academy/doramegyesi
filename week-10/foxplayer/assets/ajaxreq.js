@@ -3,7 +3,8 @@
 const playlist = document.querySelector('.playlist');
 const tracks = document.querySelector('.tracks');
 const audio = document.querySelector('audio');
-
+const currentSong = document.querySelector('.currentTitle');
+const currentArtist = document.querySelector('.currentArtist');
 
 function ajaxreq(url, method, callback) {
 	const req = new XMLHttpRequest();
@@ -30,11 +31,11 @@ const getPlaylists = function() {
             playlists.forEach(function(item) {
                 var playlistItem = document.createElement('div');
                 playlistItem.setAttribute('class', 'playlistItem');
+				playlistItem.setAttribute('id', item.id);
                 playlistItem.innerText = item.title;
                 playlist.appendChild(playlistItem);
 				playlistItem.addEventListener('click', function() {
-					ajaxreq('http://localhost:3000/playlists-tracks/' + playlistItem.id, 'GET', getTracklist);
-					console.log(playlistItem);
+					ajaxreq('http://localhost:3000/playlists-tracks/' + item.id, 'GET', getTracklist);
 				});
             });
         }
@@ -56,6 +57,7 @@ const getTracklist = function() {
         if (req.readyState === 4 && req.status === 200) {
             var tracklist = JSON.parse(req.response);
             console.log(tracklist);
+			tracks.innerText = '';
             tracklist.forEach(function(item) {
                 var tracklistItem = document.createElement('div');
                 tracklistItem.setAttribute('class', 'tracklistItem');
@@ -64,6 +66,10 @@ const getTracklist = function() {
                 tracklistItem.addEventListener('click', function() {
                     play(item.path);
                 });
+				tracklistItem.addEventListener('click', function() {
+					currentSong.innerText = item.title;
+					currentArtist.innerText = item.artist;
+				})
             });
         }
     }

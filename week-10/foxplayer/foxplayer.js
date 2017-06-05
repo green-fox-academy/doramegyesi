@@ -61,6 +61,7 @@ app.get('/playlists-tracks/:playlistId', function(req, res) {
             response = rows;
         };
         res.send(response);
+        console.log(response);
     });
 });
 
