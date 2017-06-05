@@ -78,6 +78,18 @@ app.put('/todos/:id', function(req, res) {
 	});
 });
 
+app.get('/todos/incomplete', function (res, req) {
+    connect.query('SELECT * FROM todolist WHERE completed = 0', function(err, rows) {
+        if (err) {
+            console.log('could not find the table', err.message);
+        } else {
+            response = rows;
+            console.log(response);
+        }
+        res.send(response);
+    });
+});
+
 app.listen(3000, function() {
     console.log('server is running smoothly');
 });
