@@ -56,6 +56,20 @@ app.delete('/todos/:id', function(req, res) {
     });
 });
 
+app.post('/todos/', function(req, res) {
+    connect.query('INSERT INTO todolist (text) VALUES("'+ req.body.text +'");', function(err, rows) {
+        connect.query('SELECT * FROM todolist', function(err, rows) {
+    		if (err) {
+    			console.log('could not find the table', err.message);
+    		} else {
+    			response = rows;
+    			console.log(response);
+    		}
+            res.send(response);
+    	});
+    });
+});
+
 app.listen(3000, function() {
     console.log('server is running smoothly');
 });

@@ -1,6 +1,8 @@
 'use strict';
 
 const list = document.querySelector('.list');
+const button = document.querySelector('button');
+const input = document.querySelector('input');
 
 function ajaxreq(url, method, callback) {
 	const req = new XMLHttpRequest();
@@ -58,5 +60,30 @@ const getTodoList = function() {
         }
     }
 };
+
+const postToServer = function(url, method, input, callback) {
+    const req = new XMLHttpRequest();
+    const method = 'POST';
+    const url = 'http://localhost:3000/todos';
+    req.open(method, url);
+    req.setRequestHeader('Content-Type', 'application/json');
+    req.setRequestHeader('Accept', 'application/json');
+    req.onreadystatechange = function() {
+        if (req.readyState === 4 && req.status === 200) {
+            var newTodo = JSON.parse(req.response);
+            callback(newTodo);
+        };
+    };
+    var addTodo = {
+        text: input,
+        completed: 0
+    };
+    req.send(JSON.stringify(addTodo));
+};
+
+button.addEventListener('click', function() {
+    input.value = '';
+    postToServer('http://localhost:3000/todos', 'POST', input.value, getTodoList);
+});
 
 getTodoList();
