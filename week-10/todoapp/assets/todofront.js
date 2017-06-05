@@ -3,6 +3,9 @@
 const list = document.querySelector('.list');
 const button = document.querySelector('button');
 const input = document.querySelector('input');
+const incomplete = document.querySelector('.incomplete');
+const done = document.querySelector('.done');
+const total = document.querySelector('.all');
 
 function ajaxreq(url, method, callback) {
 	const req = new XMLHttpRequest();
@@ -110,5 +113,7 @@ const putToServer = function(url, method, completed, callback) {
     };
     req.send(JSON.stringify(status));
 };
+
+total.addEventListener('click', getTodoList);
 
 getTodoList();
