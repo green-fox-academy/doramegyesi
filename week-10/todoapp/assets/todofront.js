@@ -56,6 +56,9 @@ const getTodoList = function() {
                 };
                 check.setAttribute('id', item.id);
                 icons.appendChild(check);
+                check.addEventListener('click', function() {
+                    putToServer('http://localhost:3000/todos/' + check.id, 'PUT', item.completed, getTodoList);
+                });
 			});
         }
     }
@@ -83,5 +86,29 @@ button.addEventListener('click', function() {
     postToServer('http://localhost:3000/todos', 'POST', input.value, getTodoList);
     input.value = '';
 });
+
+const putToServer = function(url, method, completed, callback) {
+    const req = new XMLHttpRequest();
+    req.open(method, url);
+    req.setRequestHeader('Content-Type', 'application/json');
+    req.setRequestHeader('Accept', 'application/json');
+    req.onreadystatechange = function() {
+        if (req.readyState === 4 && req.status === 200) {
+            var newStatus = JSON.parse(req.response);
+            callback(newStatus);
+        };
+    };
+    var status;
+    if (completed === 0) {
+        status = {
+            completed: 1
+        };
+    } else {
+        status = {
+            completed: 0
+        };
+    };
+    req.send(JSON.stringify(status));
+};
 
 getTodoList();
