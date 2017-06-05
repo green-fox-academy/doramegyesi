@@ -67,7 +67,7 @@ app.post('/todos/', function(req, res) {
 });
 
 app.put('/todos/:id', function(req, res) {
-    connect.query('UPDATE todolist SET completed = "'+ req.body.completed +'" WHERE id = "'+ req.params.id +'");', function(err, rows) {
+    connect.query('UPDATE todolist SET completed = "'+ req.body.completed +'" WHERE id = "'+ req.params.id +'"', function(err, rows) {
 		if (err) {
 			console.log('could not find the table', err.message);
 		} else {

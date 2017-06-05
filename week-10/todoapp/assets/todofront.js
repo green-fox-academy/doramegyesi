@@ -49,7 +49,7 @@ const getTodoList = function() {
                 console.log(item.text);
                 console.log(item.completed);
                 var check = document.createElement('div');
-                if (item.completed === '0') {
+                if (item.completed === 0) {
                     check.setAttribute('class', 'no');
                 } else {
                     check.setAttribute('class', 'yes');
