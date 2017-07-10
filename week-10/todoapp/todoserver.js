@@ -30,16 +30,19 @@ connect.connect(function(err) {
     console.log("connected successfully to database");
 });
 
+const answer = function() {
+    if (err) {
+        console.log('could not find the table', err.message);
+    } else {
+        response = rows;
+        console.log(response);
+    }
+    res.send(response);
+};
+
 app.get('/todos', function(req, res) {
     connect.query('SELECT * FROM todolist', function(err, rows) {
-        if (err) {
-            console.log('could not find the table', err.message);
-        } else {
-            response = rows;
-            console.log(response);
-        }
-        res.send(response);
-    });
+        answer();
 });
 
 app.delete('/todos/:id', function(req, res) {
